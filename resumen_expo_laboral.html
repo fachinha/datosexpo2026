@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expo Laboral 2026 • Resumen</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            orange: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800 antialiased min-h-screen selection:bg-orange-500 selection:text-white p-3 sm:p-6 lg:p-8">
+
+  <div class="max-w-6xl mx-auto space-y-6">
+
+    <!-- ENCABEZADO SUPERIOR LIMPIO -->
+    <header class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-2 border-b border-zinc-200">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider bg-orange-100 text-orange-800 border border-orange-200">
+            Municipalidad de San Carlos de Bariloche
+          </span>
+          <span class="text-xs text-zinc-400 font-medium">Secretaría de Producción y Empleo</span>
+        </div>
+        <h1 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-zinc-900 tracking-tight">
+          Expo Laboral 2026
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-2 self-end sm:self-center">
+        <!-- Indicador de corte -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500 text-white text-xs font-bold shadow-sm shadow-orange-500/20">
+          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+          22 y 23 de Octubre · Puerto San Carlos
+        </div>
+      </div>
+    </header>
+
+
+    <!-- =================================================================================== -->
+    <!-- SECCIÓN 1: PÁGINA WEB OFICIAL (bariloche.gov.ar/expo-laboral-php) -->
+    <!-- =================================================================================== -->
+
+    <div class="space-y-4">
+      
+      <!-- Título de Sección con Insignia de Fuente -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center font-bold">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-zinc-900 flex items-center gap-2">
+              Página Web Expo Laboral · Inscripciones y Demandas
+            </h2>
+            <span class="text-xs text-zinc-400 font-medium">Datos registrados directamente en la web bariloche.gov.ar/expo-laboral-php</span>
+          </div>
+        </div>
+        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+          Vía Página Web
+        </span>
+      </div>
+
+      <!-- TARJETAS KPIS WEB -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Total Inscriptos Web</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">260</span>
+            <span class="text-xs font-semibold text-zinc-500">personas</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Registrados en la plataforma oficial</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Búsqueda Activa Empleo</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">77.3%</span>
+            <span class="text-xs font-semibold text-zinc-500">201 personas</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Asisten con objetivo laboral directo</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Inscripciones a Charlas</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">350</span>
+            <span class="text-xs font-semibold text-zinc-500">reservas</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">7 actividades · 2 cupos agotados</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Recorrido de Stands</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">123</span>
+            <span class="text-xs font-semibold text-zinc-500">inscriptos</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Contacto con empresas y organismos</span>
+        </div>
+
+      </div>
+
+      <!-- FILA DE DASHBOARDS WEB: GRÁFICO 1 Y GRÁFICO 2 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Gráfico 1: Situación Laboral (Dona en Paleta Naranja) -->
+        <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="pie-chart" class="w-4 h-4 text-orange-500"></i>
+              Situación Laboral de la Gente Inscripta en la Web
+            </h3>
+            <span class="text-[11px] font-semibold text-zinc-400">Total: 260</span>
+          </div>
+
+          <div class="relative h-56">
+            <canvas id="laborSituationChart"></canvas>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-zinc-100 text-center text-xs">
+            <div class="bg-orange-50/80 rounded-lg p-1.5 border border-orange-100">
+              <span class="block font-black text-orange-600 text-base">201</span>
+              <span class="text-[10px] text-orange-800 font-semibold">En búsqueda activa (77.3%)</span>
+            </div>
+            <div class="bg-zinc-50 rounded-lg p-1.5 border border-zinc-200">
+              <span class="block font-black text-zinc-500 text-base">59</span>
+              <span class="text-[10px] text-zinc-500 font-semibold">No busca empleo (22.7%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfico 2: Ocupación de Charlas y Talleres (Barras Horizontales) -->
+        <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="bar-chart-2" class="w-4 h-4 text-orange-500"></i>
+              Inscriptos a las Charlas de Capacitación (Web)
+            </h3>
+            <span class="text-[11px] font-semibold text-zinc-400">Total: 350 reservas</span>
+          </div>
+
+          <div class="relative h-56">
+            <canvas id="talksOccupancyChart"></canvas>
+          </div>
+
+          <!-- Resumen de Charlas Agotadas -->
+          <div class="flex items-center justify-between gap-2 mt-4 pt-3 border-t border-zinc-100 text-xs">
+            <div class="flex items-center gap-1.5 text-zinc-600 text-[11px]">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+              <span><strong>Agotadas:</strong> Conectamos oportunidades (115%) e IA para Empleo (100%)</span>
+            </div>
+            <span class="text-[11px] font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded">
+              Cupos Web
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Perfiles de los Inscriptos en la Web -->
+      <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold text-zinc-700 flex items-center gap-1.5">
+            <i data-lucide="users" class="w-3.5 h-3.5 text-orange-500"></i>
+            Perfil de los Inscriptos a través de la Página Web:
+          </span>
+          <span class="text-[11px] text-zinc-400 font-medium">Relevamiento oficial</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-xs px-3 py-1 rounded-lg bg-orange-50 border border-orange-200 text-orange-800 font-bold">
+            Estudiantes Secundarios: 87 (33.5%)
+          </span>
+          <span class="text-xs px-3 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-medium">
+            Otros / Buscadores de empleo: 70 (26.9%)
+          </span>
+          <span class="text-xs px-3 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-medium">
+            Empleados: 35 (13.5%)
+          </span>
+          <span class="text-xs px-3 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-medium">
+            Estudiantes Universitarios: 28 (10.8%)
+          </span>
+          <span class="text-xs px-3 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-medium">
+            Emprendedores: 25 (9.6%)
+          </span>
+          <span class="text-xs px-3 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-medium">
+            Profesionales / Independientes: 15 (5.8%)
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- =================================================================================== -->
+    <!-- LÍNEA DIVISORIA SOLICITADA POR EL USUARIO -->
+    <!-- =================================================================================== -->
+
+    <div class="relative my-8 py-2">
+      <div class="absolute inset-0 flex items-center" aria-hidden="true">
+        <div class="w-full border-t-2 border-dashed border-orange-300"></div>
+      </div>
+      <div class="relative flex justify-center">
+        <span class="bg-zinc-50 px-6 py-2 rounded-full border-2 border-orange-500 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-orange-700 flex items-center gap-2 shadow-sm">
+          <i data-lucide="instagram" class="w-4 h-4 text-orange-600"></i>
+          analisis de datos del instagram
+        </span>
+      </div>
+    </div>
+
+
+    <!-- =================================================================================== -->
+    <!-- SECCIÓN 2: ANÁLISIS DE DATOS DEL INSTAGRAM (@trabajobarilochemscb) -->
+    <!-- =================================================================================== -->
+
+    <div class="space-y-4">
+      
+      <!-- Título de Sección con Insignia de Fuente -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center font-bold">
+            <i data-lucide="bar-chart" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-zinc-900 flex items-center gap-2">
+              Rendimiento y Alcance de las Publicaciones en Instagram
+            </h2>
+            <span class="text-xs text-zinc-400 font-medium">Métricas extraídas de las estadísticas oficiales de la cuenta @trabajobarilochemscb</span>
+          </div>
+        </div>
+        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200">
+          Estadísticas Oficiales
+        </span>
+      </div>
+
+      <!-- TARJETAS KPIS INSTAGRAM BASADAS EN ESTADÍSTICAS REALES -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Alcance Acumulado Campaña</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">38.617</span>
+            <span class="text-xs font-semibold text-zinc-500">cuentas</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Personas alcanzadas por las piezas</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Publicación Récord Alcance</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">10.956</span>
+            <span class="text-xs font-semibold text-emerald-600 font-bold">Post 14/Sep</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">13.879 impresiones · 666 interacciones</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Reproducciones en Reels</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">32.748</span>
+            <span class="text-xs font-semibold text-zinc-500">vistas</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">En los 5 videos de la campaña</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-zinc-200/90 shadow-sm">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Veces Compartidas</span>
+          <div class="flex items-baseline gap-2">
+            <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">567</span>
+            <span class="text-xs font-semibold text-zinc-500">shares</span>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Gran viralidad boca a boca</span>
+        </div>
+
+      </div>
+
+      <!-- GRÁFICO COMPARATIVO DE ALCANCE POR PUBLICACIÓN (CHART.JS) -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="trending-up" class="w-4 h-4 text-orange-500"></i>
+              Comparativa de Alcance (Cuentas Alcanzadas) por Publicación
+            </h3>
+            <span class="text-xs text-zinc-400">Medición exacta de personas únicas que vieron cada publicación</span>
+          </div>
+          <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2.5 py-1 rounded-full">
+            Métrica de Alcance Real
+          </span>
+        </div>
+
+        <div class="relative h-64 sm:h-72">
+          <canvas id="postsReachChart"></canvas>
+        </div>
+      </div>
+
+      <!-- TABLA DETALLADA DE TODAS LAS PUBLICACIONES CON SU ALCANCE Y RENDIMIENTO -->
+      <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
+        <div class="flex items-center justify-between border-b border-zinc-100 pb-3 mb-4">
+          <h3 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
+            <i data-lucide="list" class="w-4 h-4 text-orange-500"></i>
+            Desglose Publicación por Publicación: Alcance e Interacciones
+          </h3>
+          <span class="text-xs font-semibold text-zinc-400">Ordenado por fecha de publicación</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-zinc-700">
+            <thead class="bg-zinc-50 text-[10.5px] uppercase font-bold text-zinc-400 border-b border-zinc-200">
+              <tr>
+                <th class="py-2.5 px-3">Fecha y Hora</th>
+                <th class="py-2.5 px-3">Tipo</th>
+                <th class="py-2.5 px-3">Publicación / Temática</th>
+                <th class="py-2.5 px-3 text-right">Alcance (Cuentas)</th>
+                <th class="py-2.5 px-3 text-right">Vistas / Impresiones</th>
+                <th class="py-2.5 px-3 text-right">Me Gusta</th>
+                <th class="py-2.5 px-3 text-right">Compartidos</th>
+                <th class="py-2.5 px-3 text-right">Total Interacciones</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-100 font-medium">
+              
+              <!-- 1. Post 14/09 (Top 1) -->
+              <tr class="bg-orange-50/50 hover:bg-orange-50 transition">
+                <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">14/Sep 10:29 hs</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-orange-600 text-white">Post</span></td>
+                <td class="py-3 px-3">
+                  <div class="font-bold text-zinc-900">🚀 Lanzamiento Oficial de Fecha Expo Laboral</div>
+                  <div class="text-[11px] text-zinc-500 truncate max-w-xs">Anuncio de la 5.ª edición · 22 y 23 de octubre en Puerto San Carlos</div>
+                </td>
+                <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">10.956</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">13.879</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">303</td>
+                <td class="py-3 px-3 text-right font-bold text-orange-700">269</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600">666</td>
+              </tr>
+
+              <!-- 2. Reel 08/10 (Top 2) -->
+              <tr class="bg-orange-50/30 hover:bg-orange-50 transition">
+                <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">08/Oct 10:08 hs</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
+                <td class="py-3 px-3">
+                  <div class="font-bold text-zinc-900">🚀 Palpitando la Expo Laboral 2026</div>
+                  <div class="text-[11px] text-zinc-500 truncate max-w-xs">Expectativa por una nueva edición de oportunidades y empresas</div>
+                </td>
+                <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">10.307</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">10.526</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">109</td>
+                <td class="py-3 px-3 text-right font-bold text-orange-700">108</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600">249</td>
+              </tr>
+
+              <!-- 3. Reel 18/09 (Top 3) -->
+              <tr class="hover:bg-zinc-50 transition">
+                <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">18/Sep 12:16 hs</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
+                <td class="py-3 px-3">
+                  <div class="font-bold text-zinc-900">🔎 ¿Estás buscando trabajo o cambiar de rumbo?</div>
+                  <div class="text-[11px] text-zinc-500 truncate max-w-xs">Invitación a conectar con ofertas y referentes</div>
+                </td>
+                <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">5.426</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">7.546</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">122</td>
+                <td class="py-3 px-3 text-right font-bold text-orange-700">104</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600">260</td>
+              </tr>
+
+              <!-- 4. Reel 28/08 -->
+              <tr class="hover:bg-zinc-50 transition">
+                <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">28/Ago 11:18 hs</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
+                <td class="py-3 px-3">
+                  <div class="font-bold text-zinc-900">🚀 ¡Ya tenemos fecha confirmada!</div>
+                  <div class="text-[11px] text-zinc-500 truncate max-w-xs">Lema: "Habilidades de hoy, empleos del mañana" con @mscb</div>
+                </td>
+                <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">4.626</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">6.446</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">103</td>
+                <td class="py-3 px-3 text-right font-bold text-orange-700">61</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600">197</td>
+              </tr>
+
+              <!-- 5. Reel 14/10 -->
+              <tr class="hover:bg-zinc-50 transition">
+                <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">14/Oct 10:15 hs</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
+                <td class="py-3 px-3">
+                  <div class="font-bold text-zinc-900">🗣️ Marcela Cabral: "Conversaciones que abren puertas"</div>
+                  <div class="text-[11px] text-zinc-500 truncate max-w-xs">Cápsula de comunicación efectiva y entrevistas con @marce.cabral</div>
+                </td>
+                <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">3.684</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">4.198</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">109</td>
+                <td class="py-3 px-3 text-right font-bold text-orange-700">24</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600">146</td>
+              </tr>
+
+              <!-- 6. Reel 30/09 -->
+              <tr class="hover:bg-zinc-50 transition">
+                <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">30/Sep 16:52 hs</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
+                <td class="py-3 px-3">
+                  <div class="font-bold text-zinc-900">🎓 CENS N.° 5: Orientación Laboral</div>
+                  <div class="text-[11px] text-zinc-500 truncate max-w-xs">Cobertura de charla de Ma. Eugenia Becerra con @cens5bariloche</div>
+                </td>
+                <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">3.618</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">4.032</td>
+                <td class="py-3 px-3 text-right font-bold text-zinc-800">27</td>
+                <td class="py-3 px-3 text-right font-bold text-orange-700">1</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600">28</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-3 pt-3 border-t border-zinc-100 flex items-center justify-between text-[11px] text-zinc-500">
+          <span>* Los carruseles de agenda de charlas (02/Oct, 06/Oct y 09/Oct) fueron publicados en coautoría con la cuenta matriz de la Secretaría.</span>
+          <span class="font-bold text-orange-700">Total Alcance Directo Auditado: 38.617</span>
+        </div>
+      </div>
+
+      <!-- LAS 3 PUBLICACIONES CON MAYOR INTERACCIÓN Y ALCANCE (ESTILO DESTACADO) -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
+          <h3 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
+            <i data-lucide="trophy" class="w-4 h-4 text-orange-500"></i>
+            Las 3 Publicaciones con Mayor Alcance e Interacción
+          </h3>
+          <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded">Top Rendimiento</span>
+        </div>
+
+        <!-- 3 Tarjetas de Publicaciones Clave -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          
+          <!-- Hito 1: Post 14/Sep -->
+          <div class="p-4 rounded-xl bg-orange-50/70 border-2 border-orange-300 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-orange-600 text-white">#1 en Alcance</span>
+                <span class="text-[11px] font-bold text-zinc-500">14/09/2026 · 10:29 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">Lanzamiento Oficial Expo Laboral</h4>
+              <p class="text-xs text-zinc-700 italic">"¡La Expo Laboral Bariloche ya tiene fecha! La 5.ª edición consecutiva llega para volver a conectar a la comunidad con empresas..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-orange-200 flex items-center justify-between text-xs">
+              <span class="font-extrabold text-orange-700">Alcance: 10.956</span>
+              <span class="font-bold text-zinc-700">666 interacciones (303 likes · 269 shares)</span>
+            </div>
+          </div>
+
+          <!-- Hito 2: Reel 08/Oct -->
+          <div class="p-4 rounded-xl bg-orange-50/70 border-2 border-orange-300 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-pink-600 text-white">#2 en Alcance</span>
+                <span class="text-[11px] font-bold text-zinc-500">08/10/2026 · 10:08 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">Palpitando la Expo Laboral 2026</h4>
+              <p class="text-xs text-zinc-700 italic">"¡Estamos palpitando la Expo Laboral 2026! Cada vez falta menos para encontrarnos en una nueva edición de oportunidades..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-orange-200 flex items-center justify-between text-xs">
+              <span class="font-extrabold text-orange-700">Alcance: 10.307</span>
+              <span class="font-bold text-zinc-700">10.526 reproducciones · 108 shares</span>
+            </div>
+          </div>
+
+          <!-- Hito 3: Reel 18/Sep -->
+          <div class="p-4 rounded-xl bg-orange-50/70 border-2 border-orange-300 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-orange-700 text-white">#3 en Alcance</span>
+                <span class="text-[11px] font-bold text-zinc-500">18/09/2026 · 12:16 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">¿Estás buscando trabajo?</h4>
+              <p class="text-xs text-zinc-700 italic">"La Expo Laboral Bariloche es una oportunidad para acercarte a empresas, conocer propuestas de formación y escuchar referentes..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-orange-200 flex items-center justify-between text-xs">
+              <span class="font-extrabold text-orange-700">Alcance: 5.426</span>
+              <span class="font-bold text-zinc-700">7.546 reproducciones · 122 likes</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- =================================================================================== -->
+    <!-- CONCLUSIÓN Y PIE INSTITUCIONAL -->
+    <!-- =================================================================================== -->
+
+    <div class="bg-zinc-900 text-white p-5 rounded-2xl shadow-sm border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-orange-600 text-white text-[10px] font-black uppercase tracking-wider">Conclusión</span>
+          <span class="text-xs text-zinc-400">Dirección de Trabajo</span>
+        </div>
+        <p class="text-xs sm:text-sm text-zinc-200 leading-relaxed max-w-3xl">
+          Las publicaciones en Instagram alcanzaron a más de <strong>38.600 personas</strong> e impulsaron de forma directa los <strong>260 inscriptos</strong> registrados en la plataforma web municipal. El <strong>77.3% busca activamente empleo</strong>, consolidando una demanda que ya agotó los cupos de los talleres clave de inteligencia artificial y oportunidades laborales.
+        </p>
+      </div>
+      <div class="flex-shrink-0 text-center sm:text-right text-[11px] text-zinc-400">
+        <p>Fecha de Corte: <strong>15/10/2026 08:00 UTC</strong></p>
+        <p>Sede: <strong>Puerto San Carlos</strong></p>
+      </div>
+    </div>
+
+    <!-- PIE MINIMALISTA -->
+    <footer class="text-center text-[11px] text-zinc-400 py-3 border-t border-zinc-200">
+      Municipalidad de San Carlos de Bariloche • Secretaría de Producción y Empleo • Cuenta @trabajobarilochemscb • bariloche.gov.ar/expo-laboral-php
+    </footer>
+
+  </div>
+
+
+  <!-- =================================================================================== -->
+  <!-- INICIALIZACIÓN DE CHART.JS Y LUCIDE ICONS -->
+  <!-- =================================================================================== -->
+
+  <script>
+    // Inicializar iconos Lucide
+    lucide.createIcons();
+
+    // Configuración global de Chart.js
+    Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
+    Chart.defaults.color = '#71717a';
+
+    // 1. Gráfico de Situación Laboral (Dona)
+    new Chart(document.getElementById('laborSituationChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Búsqueda activa (201)', 'No busca actualmente (59)'],
+        datasets: [{
+          data: [201, 59],
+          backgroundColor: [
+            '#ea580c', // Orange 600
+            '#e4e4e7'  // Zinc 200
+          ],
+          borderColor: '#ffffff',
+          borderWidth: 2,
+          hoverOffset: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              boxWidth: 10,
+              padding: 12,
+              font: { size: 11, weight: '600' }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                const total = 260;
+                const pct = ((c.raw / total) * 100).toFixed(1);
+                return ` ${c.label}: ${c.raw} (${pct}%)`;
+              }
+            }
+          }
+        },
+        cutout: '70%'
+      }
+    });
+
+    // 2. Gráfico de Charlas y Talleres (Barras Horizontales con Ocupación y Agotadas)
+    new Chart(document.getElementById('talksOccupancyChart'), {
+      type: 'bar',
+      data: {
+        labels: [
+          'D2 Conectamos oportunidades',
+          'D2 Buscá trabajo con IA',
+          'D1 El CV invisible',
+          'D1 Conversaciones que abren puertas',
+          'D1 Empleabilidad 360',
+          'D2 Habilidades hotelería',
+          'D2 Pensando tu futuro'
+        ],
+        datasets: [{
+          label: 'Inscriptos',
+          data: [23, 20, 87, 81, 72, 43, 24],
+          backgroundColor: [
+            '#10b981', // Emerald (Agotado 115%)
+            '#10b981', // Emerald (Agotado 100%)
+            '#ea580c', // Orange 600 (87%)
+            '#f97316', // Orange 500 (81%)
+            '#fb923c', // Orange 400 (72%)
+            '#fdba74', // Orange 300 (54%)
+            '#fed7aa'  // Orange 200 (40%)
+          ],
+          borderRadius: 6,
+          barThickness: 16
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                const maxCupos = [20, 20, 100, 100, 100, 80, 60];
+                const maxC = maxCupos[c.dataIndex];
+                const pct = ((c.raw / maxC) * 100).toFixed(1);
+                return ` ${c.raw} inscriptos de ${maxC} cupos (${pct}%)`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { 
+            beginAtZero: true, 
+            grid: { color: '#f4f4f5' }, 
+            ticks: { font: { size: 10 } } 
+          },
+          y: { 
+            grid: { display: false }, 
+            ticks: { 
+              font: { size: 10.5, weight: '600' }, 
+              color: '#27272a' 
+            } 
+          }
+        }
+      }
+    });
+
+    // 3. Gráfico de Alcance (Cuentas Alcanzadas) por Publicación de Instagram
+    new Chart(document.getElementById('postsReachChart'), {
+      type: 'bar',
+      data: {
+        labels: [
+          'Post 14/Sep (Fecha Oficial)',
+          'Reel 08/Oct (Palpitando Expo)',
+          'Reel 18/Sep (¿Buscás trabajo?)',
+          'Reel 28/Ago (Lanzamiento)',
+          'Reel 14/Oct (Marcela Cabral)',
+          'Reel 30/Sep (CENS N°5)'
+        ],
+        datasets: [{
+          label: 'Cuentas Alcanzadas (Alcance)',
+          data: [10956, 10307, 5426, 4626, 3684, 3618],
+          backgroundColor: [
+            '#ea580c', // Orange 600 (Top 1)
+            '#ea580c', // Orange 600 (Top 2)
+            '#f97316', // Orange 500 (Top 3)
+            '#fb923c', // Orange 400
+            '#fdba74', // Orange 300
+            '#fed7aa'  // Orange 200
+          ],
+          borderRadius: 8,
+          barThickness: 28
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                return ` ${c.raw.toLocaleString('es-AR')} cuentas alcanzadas`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 12000,
+            grid: { color: '#f4f4f5' },
+            ticks: {
+              stepSize: 3000,
+              font: { size: 10 },
+              callback: function(v) { return v.toLocaleString('es-AR'); }
+            }
+          },
+          x: {
+            grid: { display: false },
+            ticks: {
+              font: { size: 10.5, weight: '600' },
+              color: '#27272a',
+              callback: function(val, index) {
+                const label = this.getLabelForValue(val);
+                return label.length > 20 ? label.substr(0, 18) + '...' : label;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
