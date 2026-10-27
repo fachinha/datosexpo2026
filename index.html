@@ -40,9 +40,6 @@
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .badge-glow {
-      box-shadow: 0 0 15px rgba(234, 88, 12, 0.2);
-    }
   </style>
 </head>
 <body class="bg-zinc-50 text-zinc-800 antialiased min-h-screen selection:bg-orange-500 selection:text-white p-3 sm:p-6 lg:p-8">
@@ -67,19 +64,23 @@
           </span>
         </h1>
         <p class="text-xs sm:text-sm text-zinc-500 mt-0.5">
-          Tablero Integral de Monitoreo: Difusión y Convocatoria (Pre-Expo) vs. Asistencia, Demografía y Demanda Laboral (Post-Expo)
+          Tablero Integral: Difusión Pre-Expo, Asistencia Post-Expo y Auditoría Final de Instagram
         </p>
       </div>
 
-      <!-- BOTONES DE NAVEGACIÓN RÁPIDA / FILTRO DE FASES -->
+      <!-- BOTONES DE NAVEGACIÓN RÁPIDA -->
       <div class="flex flex-wrap items-center gap-1.5 p-1.5 bg-zinc-200/70 rounded-2xl border border-zinc-300/80">
-        <a href="#fase-pre" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-zinc-700 hover:text-orange-700 hover:bg-white flex items-center gap-1.5 shadow-sm">
+        <a href="#fase-pre" class="px-3 py-1.5 rounded-xl text-xs font-bold transition text-zinc-700 hover:text-orange-700 hover:bg-white flex items-center gap-1.5 shadow-sm">
           <i data-lucide="send" class="w-3.5 h-3.5 text-orange-500"></i>
-          Fase 1: Pre-Expo
+          Pre-Expo
         </a>
-        <a href="#fase-post" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-orange-600 text-white shadow-sm flex items-center gap-1.5 hover:bg-orange-700">
-          <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-white"></i>
-          Fase 2: Post-Expo
+        <a href="#fase-post" class="px-3 py-1.5 rounded-xl text-xs font-bold transition text-zinc-700 hover:text-orange-700 hover:bg-white flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-500"></i>
+          Post-Expo
+        </a>
+        <a href="#datos-post-expo-instagram" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-orange-600 text-white shadow-sm flex items-center gap-1.5 hover:bg-orange-700">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-white"></i>
+          Post-Expo Instagram
         </a>
       </div>
     </header>
@@ -101,7 +102,7 @@
               <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-orange-600 text-white tracking-wider">Etapa 1</span>
               <h2 class="text-lg sm:text-xl font-extrabold text-zinc-900 tracking-tight">Pre-Expo: Difusión, Convocatoria y Preinscripciones Web</h2>
             </div>
-            <p class="text-xs text-zinc-600 mt-0.5">Rendimiento de la campaña de comunicación previa al evento (07 al 21 de Octubre)</p>
+            <p class="text-xs text-zinc-600 mt-0.5">Rendimiento inicial de la campaña de comunicación previa al evento (07 al 21 de Octubre)</p>
           </div>
         </div>
         <span class="text-xs font-bold px-3 py-1.5 rounded-full bg-white text-orange-800 border border-orange-200 shadow-sm self-start sm:self-center">
@@ -122,12 +123,12 @@
         </div>
 
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Cuentas Alcanzadas (IG)</span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Cuentas Alcanzadas (Pre)</span>
           <div class="flex items-baseline gap-2">
             <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">38.617</span>
             <span class="text-xs font-semibold text-zinc-500">alcance</span>
           </div>
-          <span class="text-[11px] text-zinc-500 mt-1 block">Cuentas únicas impactadas por las publicaciones</span>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Cuentas únicas al corte del 15 de octubre</span>
         </div>
 
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
@@ -140,12 +141,12 @@
         </div>
 
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Vistas de Video (Reels)</span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 block mb-1">Vistas Video (5 Reels Pre)</span>
           <div class="flex items-baseline gap-2">
             <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">32.748</span>
             <span class="text-xs font-semibold text-zinc-500">reproducciones</span>
           </div>
-          <span class="text-[11px] text-zinc-500 mt-1 block">En los 5 reels institucionales difundidos</span>
+          <span class="text-[11px] text-zinc-500 mt-1 block">Medición previa a las jornadas presenciales</span>
         </div>
 
       </div>
@@ -153,7 +154,6 @@
       <!-- DASHBOARDS WEB: SITUACIÓN LABORAL INICIAL Y OCUPACIÓN DE CHARLAS -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         
-        <!-- Gráfico 1: Situación Laboral Inicial en Web -->
         <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
@@ -179,7 +179,6 @@
           </div>
         </div>
 
-        <!-- Gráfico 2: Charlas de Capacitación Pre-Inscripción -->
         <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
@@ -206,7 +205,7 @@
 
       </div>
 
-      <!-- LÍNEA DIVISORIA EXACTA SOLICITADA POR EL USUARIO -->
+      <!-- LÍNEA DIVISORIA SOLICITADA POR EL USUARIO -->
       <div class="relative my-8 py-2">
         <div class="absolute inset-0 flex items-center" aria-hidden="true">
           <div class="w-full border-t-2 border-dashed border-orange-300"></div>
@@ -219,9 +218,8 @@
         </div>
       </div>
 
-      <!-- SECCIÓN INSTAGRAM: AUDITORÍA DE PUBLICACIONES Y ALCANCE -->
+      <!-- ALCANCE INICIAL DE INSTAGRAM PRE-EXPO -->
       <div class="space-y-4">
-        
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2.5">
             <div class="w-8 h-8 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center font-bold">
@@ -229,28 +227,27 @@
             </div>
             <div>
               <h3 class="text-base sm:text-lg font-bold text-zinc-900 flex items-center gap-2">
-                Rendimiento y Alcance de las Publicaciones en Instagram
+                Rendimiento Inicial de Instagram (Corte Pre-Expo: 15 de Octubre)
               </h3>
-              <span class="text-xs text-zinc-400 font-medium">Métricas extraídas de las estadísticas oficiales de la cuenta @trabajobarilochemscb</span>
+              <span class="text-xs text-zinc-400 font-medium">Métricas extraídas antes del comienzo del evento en @trabajobarilochemscb</span>
             </div>
           </div>
           <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200">
-            Estadísticas Oficiales
+            Corte Previo
           </span>
         </div>
 
-        <!-- GRÁFICO COMPARATIVO DE ALCANCE POR PUBLICACIÓN -->
         <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm">
           <div class="flex items-center justify-between mb-4">
             <div>
               <h4 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
                 <i data-lucide="trending-up" class="w-4 h-4 text-orange-500"></i>
-                Comparativa de Alcance (Cuentas Alcanzadas) por Publicación
+                Comparativa Inicial de Alcance (Cuentas Alcanzadas) por Publicación
               </h4>
-              <span class="text-xs text-zinc-400">Medición exacta de personas únicas que vieron cada publicación</span>
+              <span class="text-xs text-zinc-400">Medición inicial de personas únicas alcanzadas antes del 22 de octubre</span>
             </div>
             <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2.5 py-1 rounded-full">
-              Métrica de Alcance Real
+              Línea Base Previa
             </span>
           </div>
 
@@ -258,126 +255,6 @@
             <canvas id="postsReachChart"></canvas>
           </div>
         </div>
-
-        <!-- TABLA DETALLADA DE TODAS LAS PUBLICACIONES -->
-        <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
-          <div class="flex items-center justify-between border-b border-zinc-100 pb-3 mb-4">
-            <h4 class="text-sm font-bold text-zinc-900 flex items-center gap-2">
-              <i data-lucide="list" class="w-4 h-4 text-orange-500"></i>
-              Desglose Publicación por Publicación: Alcance e Interacciones
-            </h4>
-            <span class="text-xs font-semibold text-zinc-400">Auditoría oficial</span>
-          </div>
-
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs text-zinc-700">
-              <thead class="bg-zinc-50 text-[10.5px] uppercase font-bold text-zinc-400 border-b border-zinc-200">
-                <tr>
-                  <th class="py-2.5 px-3">Fecha y Hora</th>
-                  <th class="py-2.5 px-3">Tipo</th>
-                  <th class="py-2.5 px-3">Publicación / Temática</th>
-                  <th class="py-2.5 px-3 text-right">Alcance (Cuentas)</th>
-                  <th class="py-2.5 px-3 text-right">Vistas / Impresiones</th>
-                  <th class="py-2.5 px-3 text-right">Me Gusta</th>
-                  <th class="py-2.5 px-3 text-right">Compartidos</th>
-                  <th class="py-2.5 px-3 text-right">Total Interacciones</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-zinc-100 font-medium">
-                
-                <tr class="bg-orange-50/50 hover:bg-orange-50 transition">
-                  <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">14/Sep 10:29 hs</td>
-                  <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-orange-600 text-white">Post</span></td>
-                  <td class="py-3 px-3">
-                    <div class="font-bold text-zinc-900">🚀 Lanzamiento Oficial de Fecha Expo Laboral</div>
-                    <div class="text-[11px] text-zinc-500 truncate max-w-xs">Anuncio de la 5.ª edición · 22 y 23 de octubre en Puerto San Carlos</div>
-                  </td>
-                  <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">10.956</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">13.879</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">303</td>
-                  <td class="py-3 px-3 text-right font-bold text-orange-700">269</td>
-                  <td class="py-3 px-3 text-right font-black text-orange-600">666</td>
-                </tr>
-
-                <tr class="bg-orange-50/30 hover:bg-orange-50 transition">
-                  <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">08/Oct 10:08 hs</td>
-                  <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
-                  <td class="py-3 px-3">
-                    <div class="font-bold text-zinc-900">🚀 Palpitando la Expo Laboral 2026</div>
-                    <div class="text-[11px] text-zinc-500 truncate max-w-xs">Expectativa por una nueva edición de oportunidades y empresas</div>
-                  </td>
-                  <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">10.307</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">10.526</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">109</td>
-                  <td class="py-3 px-3 text-right font-bold text-orange-700">108</td>
-                  <td class="py-3 px-3 text-right font-black text-orange-600">249</td>
-                </tr>
-
-                <tr class="hover:bg-zinc-50 transition">
-                  <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">18/Sep 12:16 hs</td>
-                  <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
-                  <td class="py-3 px-3">
-                    <div class="font-bold text-zinc-900">🔎 ¿Estás buscando trabajo o cambiar de rumbo?</div>
-                    <div class="text-[11px] text-zinc-500 truncate max-w-xs">Invitación a conectar con ofertas y referentes</div>
-                  </td>
-                  <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">5.426</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">7.546</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">122</td>
-                  <td class="py-3 px-3 text-right font-bold text-orange-700">104</td>
-                  <td class="py-3 px-3 text-right font-black text-orange-600">260</td>
-                </tr>
-
-                <tr class="hover:bg-zinc-50 transition">
-                  <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">28/Ago 11:18 hs</td>
-                  <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
-                  <td class="py-3 px-3">
-                    <div class="font-bold text-zinc-900">🚀 ¡Ya tenemos fecha confirmada!</div>
-                    <div class="text-[11px] text-zinc-500 truncate max-w-xs">Lema: "Habilidades de hoy, empleos del mañana" con @mscb</div>
-                  </td>
-                  <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">4.626</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">6.446</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">103</td>
-                  <td class="py-3 px-3 text-right font-bold text-orange-700">61</td>
-                  <td class="py-3 px-3 text-right font-black text-orange-600">197</td>
-                </tr>
-
-                <tr class="hover:bg-zinc-50 transition">
-                  <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">14/Oct 10:15 hs</td>
-                  <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
-                  <td class="py-3 px-3">
-                    <div class="font-bold text-zinc-900">🗣️ Marcela Cabral: "Conversaciones que abren puertas"</div>
-                    <div class="text-[11px] text-zinc-500 truncate max-w-xs">Cápsula de comunicación efectiva y entrevistas</div>
-                  </td>
-                  <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">3.684</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">4.198</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">109</td>
-                  <td class="py-3 px-3 text-right font-bold text-orange-700">24</td>
-                  <td class="py-3 px-3 text-right font-black text-orange-600">146</td>
-                </tr>
-
-                <tr class="hover:bg-zinc-50 transition">
-                  <td class="py-3 px-3 font-semibold text-zinc-900 whitespace-nowrap">30/Sep 16:52 hs</td>
-                  <td class="py-3 px-3"><span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-pink-600 text-white">Reel</span></td>
-                  <td class="py-3 px-3">
-                    <div class="font-bold text-zinc-900">🎓 CENS N.° 5: Orientación Laboral</div>
-                    <div class="text-[11px] text-zinc-500 truncate max-w-xs">Cobertura de charla de Ma. Eugenia Becerra</div>
-                  </td>
-                  <td class="py-3 px-3 text-right font-extrabold text-orange-600 text-sm">3.618</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">4.032</td>
-                  <td class="py-3 px-3 text-right font-bold text-zinc-800">27</td>
-                  <td class="py-3 px-3 text-right font-bold text-orange-700">1</td>
-                  <td class="py-3 px-3 text-right font-black text-orange-600">28</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-          <div class="mt-3 pt-3 border-t border-zinc-100 flex items-center justify-between text-[11px] text-zinc-500">
-            <span>* Los carruseles de agenda de charlas fueron publicados en colaboración oficial.</span>
-            <span class="font-bold text-orange-700">Total Alcance Auditado: 38.617</span>
-          </div>
-        </div>
-
       </div>
 
     </section>
@@ -397,16 +274,16 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-orange-600 text-white tracking-wider">Etapa 2</span>
-              <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">Post-Expo: Asistencia, Demografía y Resultados Finales</h2>
+              <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">Post-Expo: Asistencia, Demografía y Resultados Laborales</h2>
             </div>
             <p class="text-xs sm:text-sm text-zinc-400 mt-0.5">
-              Auditoría sobre la base final consolidada de <strong>2.730 participantes</strong> y <strong>1.067 acreditados</strong> presenciales
+              Auditoría sobre la base final consolidada de <strong>2.730 participantes</strong> y <strong>1.067 acreditados</strong> en el Puerto San Carlos
             </p>
           </div>
         </div>
         <div class="flex items-center gap-2 self-start sm:self-center">
           <span class="text-xs font-bold px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-            Base Consolidada 100%
+            Padrón 100% Auditado
           </span>
         </div>
       </div>
@@ -414,7 +291,6 @@
       <!-- TARJETAS KPIS MAESTRAS POST-EXPO -->
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
         
-        <!-- KPI 1: Total Base -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between text-zinc-400 mb-1">
@@ -427,11 +303,10 @@
             </div>
           </div>
           <span class="text-[11px] text-zinc-500 mt-2 block border-t border-zinc-100 pt-2">
-            Padrón total final consolidado
+            Base final consolidada
           </span>
         </div>
 
-        <!-- KPI 2: Acreditados -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between text-zinc-400 mb-1">
@@ -444,11 +319,10 @@
             </div>
           </div>
           <span class="text-[11px] text-zinc-500 mt-2 block border-t border-zinc-100 pt-2">
-            <strong>39.1%</strong> validación física en stands
+            <strong>39.1%</strong> validación física
           </span>
         </div>
 
-        <!-- KPI 3: Búsqueda Activa -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between text-zinc-400 mb-1">
@@ -461,11 +335,10 @@
             </div>
           </div>
           <span class="text-[11px] text-zinc-500 mt-2 block border-t border-zinc-100 pt-2">
-            Demanda laboral récord en la ciudad
+            Demanda laboral récord
           </span>
         </div>
 
-        <!-- KPI 4: Empleados Buscando Empleo (MÉTRICA SOLICITADA POR EL USUARIO) -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border-2 border-orange-400/80 shadow-sm flex flex-col justify-between bg-orange-50/20">
           <div>
             <div class="flex items-center justify-between text-zinc-400 mb-1">
@@ -478,11 +351,10 @@
             </div>
           </div>
           <span class="text-[11px] text-orange-900 font-medium mt-2 block border-t border-orange-200/80 pt-2">
-            Personas con trabajo que buscan cambio o mejora
+            Búsqueda de cambio o mejora
           </span>
         </div>
 
-        <!-- KPI 5: Jóvenes menores de 30 años -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between col-span-2 lg:col-span-1">
           <div>
             <div class="flex items-center justify-between text-zinc-400 mb-1">
@@ -501,10 +373,9 @@
 
       </div>
 
-      <!-- FILA DE DASHBOARDS 1: PIRÁMIDE DE EDADES CALCULADA POR DNI Y BÚSQUEDA ACTIVA POR CONDICIÓN -->
+      <!-- DASHBOARDS: PIRÁMIDE DE EDADES CALCULADA POR DNI Y BÚSQUEDA ACTIVA -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
         
-        <!-- DASHBOARD: PIRÁMIDE DE EDADES POR DNI (7 COLS) -->
         <div class="lg:col-span-7 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
@@ -515,7 +386,7 @@
               <p class="text-xs text-zinc-400">Cálculo demográfico exacto por año de nacimiento asociado a series de DNI</p>
             </div>
             <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2.5 py-1 rounded-full self-start sm:self-auto">
-              2.677 DNI Nativos + 53 Extranjeros
+              2.677 Nativos + 53 Extranjeros
             </span>
           </div>
 
@@ -523,7 +394,6 @@
             <canvas id="ageDistributionChart"></canvas>
           </div>
 
-          <!-- Píldoras de Análisis Demográfico -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 pt-3 border-t border-zinc-100 text-center text-xs">
             <div class="bg-orange-50 p-2 rounded-xl border border-orange-100">
               <span class="text-[10px] uppercase font-bold text-orange-700 block">Jóvenes (18-24)</span>
@@ -548,7 +418,6 @@
           </div>
         </div>
 
-        <!-- DASHBOARD: PERSONAS CON EMPLEO BUSCANDO TRABAJO Y BÚSQUEDA ACTIVA (5 COLS) -->
         <div class="lg:col-span-5 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-4">
             <div>
@@ -564,14 +433,13 @@
             <canvas id="employedSeekingChart"></canvas>
           </div>
 
-          <!-- Tarjeta de Destaque Analítico Especial: Ocupados Buscando Empleo -->
           <div class="mt-4 pt-3 border-t border-zinc-100 bg-orange-50/70 p-3 rounded-xl border border-orange-200">
             <div class="flex items-start gap-2.5">
               <div class="w-6 h-6 rounded-lg bg-orange-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                 <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
               </div>
               <div class="text-xs text-zinc-700">
-                <strong class="text-orange-900">Hallazgo clave en ocupación:</strong> De las <strong>399 personas con empleo registrado</strong>, <strong>357 (89.5%)</strong> manifestaron estar en búsqueda activa de una nueva oportunidad, denotando alta movilidad laboral y necesidad de mejoras de ingresos o condiciones.
+                <strong class="text-orange-900">Hallazgo clave en ocupación:</strong> De las <strong>399 personas con empleo</strong>, <strong>357 (89.5%)</strong> asisten en búsqueda activa, revelando una marcada demanda de movilidad social, mejores condiciones o cambio de rubro.
               </div>
             </div>
           </div>
@@ -579,10 +447,9 @@
 
       </div>
 
-      <!-- FILA DE DASHBOARDS 2: FLUJO DE PARTICIPANTES POR DÍA Y PERFILES OCUPACIONALES FINALES -->
+      <!-- DASHBOARDS: RITMO DE CONVOCATORIA Y COMPOSICIÓN OCUPACIONAL -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         
-        <!-- DASHBOARD: FLUJO DE CONVOCATORIA (PRE-EXPO VS DÍA 1 VS DÍA 2) -->
         <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-3">
             <div>
@@ -620,7 +487,6 @@
           </div>
         </div>
 
-        <!-- DASHBOARD: COMPOSICIÓN DE PERFILES FINALES -->
         <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-3">
             <div>
@@ -631,7 +497,7 @@
               <p class="text-xs text-zinc-400">Distribución por perfil declarado en la acreditación</p>
             </div>
             <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded">
-              Diversidad de Perfiles
+              Padrón Final
             </span>
           </div>
 
@@ -651,7 +517,7 @@
 
       </div>
 
-      <!-- FILA DE DASHBOARDS 3: TOP INSTITUCIONES EDUCATIVAS REPRESENTADAS -->
+      <!-- TOP INSTITUCIONES EDUCATIVAS REPRESENTADAS -->
       <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-100 pb-3 mb-4">
           <div>
@@ -659,7 +525,7 @@
               <i data-lucide="graduation-cap" class="w-4 h-4 text-orange-500"></i>
               Instituciones Educativas y Colegios Secundarios con Mayor Convocatoria
             </h3>
-            <p class="text-xs text-zinc-400">Relevamiento de escuelas técnicas, públicas y privadas de Bariloche presentes en la Expo</p>
+            <p class="text-xs text-zinc-400">Relevamiento de escuelas técnicas, públicas y privadas presentes en la Expo</p>
           </div>
           <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full self-start sm:self-auto">
             +420 Alumnos de Escuelas
@@ -725,47 +591,438 @@
         </div>
       </div>
 
-      <!-- CONCLUSIONES ESTRATÉGICAS Y RECOMENDACIONES DE GESTIÓN -->
-      <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm space-y-4">
-        <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
-          <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
-            <i data-lucide="compass" class="w-4 h-4 text-orange-500"></i>
-            Conclusiones Estratégicas y Recomendaciones para Políticas de Empleo
-          </h3>
-          <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2.5 py-0.5 rounded">Secretaría de Producción y Empleo</span>
+    </section>
+
+
+    <!-- =================================================================================== -->
+    <!-- SECCIÓN SOLICITADA: DATOS POST EXPO INSTAGRAM -->
+    <!-- =================================================================================== -->
+    <section id="datos-post-expo-instagram" class="space-y-6 pt-6 border-t-2 border-zinc-300">
+      
+      <!-- Banner Principal de la Sección Solicitada -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-5 rounded-2xl bg-gradient-to-r from-pink-600 via-rose-600 to-orange-600 text-white shadow-lg shadow-pink-600/20">
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-sm text-white flex items-center justify-center font-bold">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-white text-pink-700 tracking-wider">Cierre Oficial</span>
+              <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">datos post expo instagram</h2>
+            </div>
+            <p class="text-xs sm:text-sm text-pink-100 mt-0.5">
+              Auditoría completa post-evento al <strong>27 de Octubre de 2026</strong> y análisis comparativo con la etapa inicial
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 self-start sm:self-center">
+          <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-white text-zinc-900 shadow-sm flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Export Oficial: 27/Oct
+          </span>
+        </div>
+      </div>
+
+      <!-- TARJETAS KPIS DE COMPARATIVA PRE VS POST INSTAGRAM -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border-2 border-pink-200/80 shadow-sm flex flex-col justify-between bg-pink-50/20">
+          <div>
+            <div class="flex items-center justify-between text-zinc-400 mb-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-pink-800">Alcance Total Cuenta</span>
+              <i data-lucide="trending-up" class="w-4 h-4 text-pink-600"></i>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl sm:text-3xl font-black text-pink-700">80.665</span>
+              <span class="text-xs font-black text-emerald-600">+108.9%</span>
+            </div>
+          </div>
+          <span class="text-[11px] text-zinc-600 mt-2 block border-t border-pink-100 pt-2">
+            vs. <strong>38.617</strong> cuentas en Pre-Expo
+          </span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed text-zinc-700">
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-zinc-400 mb-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider">Reproducciones Video</span>
+              <i data-lucide="play-circle" class="w-4 h-4 text-orange-500"></i>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl sm:text-3xl font-extrabold text-orange-600">81.061</span>
+              <span class="text-xs font-bold text-emerald-600">+147.5%</span>
+            </div>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-2 block border-t border-zinc-100 pt-2">
+            vs. <strong>32.748</strong> vistas previas (13 Reels)
+          </span>
+        </div>
+
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-zinc-400 mb-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider">Interacciones Totales</span>
+              <i data-lucide="heart" class="w-4 h-4 text-rose-500"></i>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl sm:text-3xl font-extrabold text-rose-600">15.478</span>
+              <span class="text-xs font-bold text-emerald-600">+707.8%</span>
+            </div>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-2 block border-t border-zinc-100 pt-2">
+            Likes, comentarios, shares y guardados
+          </span>
+        </div>
+
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-zinc-400 mb-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider">Comunidad y Visitas</span>
+              <i data-lucide="users" class="w-4 h-4 text-orange-500"></i>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl sm:text-3xl font-extrabold text-zinc-900">14.725</span>
+              <span class="text-xs font-bold text-emerald-600">+2.055</span>
+            </div>
+          </div>
+          <span class="text-[11px] text-zinc-500 mt-2 block border-t border-zinc-100 pt-2">
+            <strong>11.018</strong> visitas al perfil institucional
+          </span>
+        </div>
+
+      </div>
+
+      <!-- DASHBOARD COMPARATIVO PRE VS POST EXPO (CHART.JS) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        
+        <div class="lg:col-span-6 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-orange-500"></i>
+                Comparativa de Métricas: Pre-Expo vs. Post-Expo
+              </h3>
+              <p class="text-xs text-zinc-400">Crecimiento porcentual consolidado tras la realización del evento</p>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
+              Gran Salto
+            </span>
+          </div>
+
+          <div class="relative h-64 sm:h-72">
+            <canvas id="prePostComparisonChart"></canvas>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-500 flex items-center justify-between">
+            <span>Fuente: Exportación Oficial Instagram Insights</span>
+            <span class="font-bold text-orange-700">Período de Medición: Julio - Octubre 2026</span>
+          </div>
+        </div>
+
+        <!-- GRÁFICO DE REELS POST-EXPO (RANKING Y VISTAS) -->
+        <div class="lg:col-span-6 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+                <i data-lucide="video" class="w-4 h-4 text-pink-600"></i>
+                Rendimiento de los Reels de la Campaña (Alcance y Vistas)
+              </h3>
+              <p class="text-xs text-zinc-400">Métricas consolidadas incluyendo las coberturas en vivo del evento</p>
+            </div>
+            <span class="text-xs font-bold text-pink-700 bg-pink-100 px-2 py-0.5 rounded">
+              13 Reels Oficiales
+            </span>
+          </div>
+
+          <div class="relative h-64 sm:h-72">
+            <canvas id="postExpoReelsChart"></canvas>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-500 flex items-center justify-between">
+            <span>Reel récord: <strong>08/Oct (11.788 alcance · 13.020 vistas)</strong></span>
+            <span class="font-bold text-pink-700">Total Vistas: 81.061</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TABLA DETALLADA COMPARATIVA PRE-EXPO VS POST-EXPO -->
+      <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="table" class="w-4 h-4 text-orange-500"></i>
+              Tabla Comparativa Consolidada: Pre-Expo vs. Post-Expo Instagram
+            </h3>
+            <p class="text-xs text-zinc-400">Auditoría métrica frente a frente</p>
+          </div>
+          <span class="text-xs font-bold text-zinc-600 bg-zinc-100 px-2.5 py-1 rounded-full">
+            Evolución Campaña
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-zinc-700">
+            <thead class="bg-zinc-50 text-[10.5px] uppercase font-bold text-zinc-400 border-b border-zinc-200">
+              <tr>
+                <th class="py-2.5 px-3">Indicador / Métrica</th>
+                <th class="py-2.5 px-3 text-right">Pre-Expo (Corte 15/Oct)</th>
+                <th class="py-2.5 px-3 text-right">Post-Expo (Corte 27/Oct)</th>
+                <th class="py-2.5 px-3 text-center">Variación</th>
+                <th class="py-2.5 px-3">Impacto / Justificación Analítica</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-100 font-medium">
+              
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Cuentas Alcanzadas (Alcance Total)</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">38.617</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">80.665</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+108.9%</span></td>
+                <td class="py-3 px-3 text-zinc-500">Se duplicó la audiencia alcanzada; el 85.6% correspondió a no seguidores.</td>
+              </tr>
+
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Reproducciones de Video en Reels</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">32.748</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">81.061</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+147.5%</span></td>
+                <td class="py-3 px-3 text-zinc-500">La cobertura en vivo de los Días 1 y 2 sumó casi 10.000 reproducciones adicionales.</td>
+              </tr>
+
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Alcance Acumulado en Reels</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">27.660</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">68.645</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+148.2%</span></td>
+                <td class="py-3 px-3 text-zinc-500">Tracción continua y viralización de los videos de capacitación y stands.</td>
+              </tr>
+
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Publicación Récord de Alcance</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">10.956 (Post 14/Sep)</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">11.788 (Reel 08/Oct)</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+7.6%</span></td>
+                <td class="py-3 px-3 text-zinc-500">El Reel "Palpitando la Expo" superó al Post estático de anuncio oficial.</td>
+              </tr>
+
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Historias Publicadas en Octubre</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">12 historias</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">59 historias</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+391.7%</span></td>
+                <td class="py-3 px-3 text-zinc-500">23 historias en vivo durante las dos jornadas (stands, entrevistas y sorteos).</td>
+              </tr>
+
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Interacciones con el Contenido</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">1.916 interacciones</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">15.478 interacciones</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+707.8%</span></td>
+                <td class="py-3 px-3 text-zinc-500">Máximo histórico de comentarios, guardados y compartidos hacia amigos/colegas.</td>
+              </tr>
+
+              <tr class="hover:bg-zinc-50">
+                <td class="py-3 px-3 font-bold text-zinc-900">Comunidad de Seguidores</td>
+                <td class="py-3 px-3 text-right font-semibold text-zinc-600">~12.670 seguidores</td>
+                <td class="py-3 px-3 text-right font-black text-orange-600 text-sm">14.725 seguidores</td>
+                <td class="py-3 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10.5px] font-black bg-emerald-100 text-emerald-800">+2.055 netos</span></td>
+                <td class="py-3 px-3 text-zinc-500">Crecimiento neto de +16.2%; el 71.4% de los seguidores reside en Bariloche.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- DESGLOSE DE REELS COMPLETOS CON COBERTURA EN VIVO DE LA EXPO -->
+      <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-zinc-100 pb-3">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="video" class="w-4 h-4 text-orange-500"></i>
+              Todos los Reels de la Campaña (Incluyendo Coberturas en Vivo de los Días 1 y 2)
+            </h3>
+            <p class="text-xs text-zinc-400">Orden cronológico desde el lanzamiento hasta el cierre del evento</p>
+          </div>
+          <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded">
+            13 Reels
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
           
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex items-start gap-3">
-            <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center font-bold flex-shrink-0">1</div>
+          <!-- Reel Día 2 -->
+          <div class="p-4 rounded-xl bg-orange-50/70 border border-orange-200 flex flex-col justify-between shadow-sm">
             <div>
-              <strong class="text-zinc-900 text-sm block mb-1">Eficacia de la Tracción Digital (Pre-Expo)</strong>
-              La combinación de alcance en Instagram (+38.600 personas) y preinscripciones web canalizó el 44.4% de los participantes antes del evento. Esto permitió prever la sobredemanda en talleres clave de Inteligencia Artificial y Empleabilidad, optimizando los espacios físicos en el Puerto San Carlos.
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-orange-600 text-white">Cierre Día 2</span>
+                <span class="text-[11px] font-bold text-zinc-500">23/Oct 12:33 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">🎬 Así vivimos el segundo día</h4>
+              <p class="text-xs text-zinc-700 italic">"Dos jornadas de encuentros, aprendizaje y oportunidades para seguir construyendo el futuro del trabajo en Bariloche..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-orange-200 flex items-center justify-between text-xs">
+              <span class="font-black text-orange-700">5.826 alcance</span>
+              <span class="text-zinc-600">5.976 vistas · 105 likes</span>
             </div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex items-start gap-3">
-            <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center font-bold flex-shrink-0">2</div>
+          <!-- Reel Día 1 -->
+          <div class="p-4 rounded-xl bg-orange-50/70 border border-orange-200 flex flex-col justify-between shadow-sm">
             <div>
-              <strong class="text-zinc-900 text-sm block mb-1">Foco Prioritario en Jóvenes de 18 a 24 Años</strong>
-              El 43.6% de los asistentes (1.168 personas) pertenece estrictamente a esta franja etaria, y el 58.7% tiene menos de 30 años. Se evidencia una necesidad urgente de programas municipales de primer empleo, confección de CV y articulación directa con empresas de servicios turísticos y tecnología.
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-orange-600 text-white">Apertura Día 1</span>
+                <span class="text-[11px] font-bold text-zinc-500">22/Oct 12:23 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">✨ Así vivimos el primer día</h4>
+              <p class="text-xs text-zinc-700 italic">"Una jornada llena de encuentros, oportunidades, charlas, capacitaciones y conexiones para seguir creciendo..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-orange-200 flex items-center justify-between text-xs">
+              <span class="font-black text-orange-700">3.122 alcance</span>
+              <span class="text-zinc-600">3.457 vistas · 104 likes</span>
             </div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex items-start gap-3">
-            <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center font-bold flex-shrink-0">3</div>
+          <!-- Reel Stands -->
+          <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col justify-between shadow-sm">
             <div>
-              <strong class="text-zinc-900 text-sm block mb-1">Subocupación y Demanda de Mejora en Trabajadores Ocupados</strong>
-              El dato de que el <strong>89.5% de las personas que ya tienen empleo</strong> (357 de 399) asistió en búsqueda activa revela un marcado interés por la movilidad social ascendente, mejores remuneraciones o transición del sector informal al formal.
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-zinc-700 text-white">Tips Stands</span>
+                <span class="text-[11px] font-bold text-zinc-500">21/Oct 14:58 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">🧡 ¿Vas a recorrer los stands?</h4>
+              <p class="text-xs text-zinc-700 italic">"No se trata solo de dejar tu CV. Animate a conversar, preguntar qué buscan las empresas y mostrar lo que sabés hacer..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-zinc-200 flex items-center justify-between text-xs">
+              <span class="font-black text-zinc-800">3.259 alcance</span>
+              <span class="text-zinc-600">3.532 vistas · 53 shares</span>
             </div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex items-start gap-3">
-            <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center font-bold flex-shrink-0">4</div>
+          <!-- Reel IA -->
+          <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col justify-between shadow-sm">
             <div>
-              <strong class="text-zinc-900 text-sm block mb-1">Articulación con Escuelas Técnicas y CENS</strong>
-              Con más de 420 alumnos de escuelas secundarias y técnicas (San Esteban, ESRN 46, Don Bosco, CET 25 y CET 2), la Expo funcionó como puente vocacional. Se recomienda mantener una agenda permanente de visitas y pasantías antes del egreso escolar.
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-zinc-700 text-white">Capacitación</span>
+                <span class="text-[11px] font-bold text-zinc-500">19/Oct 08:31 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">💼🤖 Buscá trabajo con IA</h4>
+              <p class="text-xs text-zinc-700 italic">"Herramientas prácticas para mejorar tu CV, identificar habilidades y prepararte para una entrevista con Gonzalo Jaquis..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-zinc-200 flex items-center justify-between text-xs">
+              <span class="font-black text-zinc-800">4.365 alcance</span>
+              <span class="text-zinc-600">5.182 vistas · 95 likes</span>
+            </div>
+          </div>
+
+          <!-- Reel Derechos -->
+          <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-zinc-700 text-white">Derechos</span>
+                <span class="text-[11px] font-bold text-zinc-500">16/Oct 15:00 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">💼 Pensando tu futuro con derechos</h4>
+              <p class="text-xs text-zinc-700 italic">"Conociendo la fuerza de tus derechos laborales a cargo de Beatriz Oñate. Un espacio para reflexionar y planificar..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-zinc-200 flex items-center justify-between text-xs">
+              <span class="font-black text-zinc-800">5.924 alcance</span>
+              <span class="text-zinc-600">7.324 vistas · 131 likes</span>
+            </div>
+          </div>
+
+          <!-- Reel Palpitando (Top 1) -->
+          <div class="p-4 rounded-xl bg-orange-100/60 border-2 border-orange-400 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-orange-600 text-white">Top 1 Reel</span>
+                <span class="text-[11px] font-bold text-zinc-500">08/Oct 10:08 hs</span>
+              </div>
+              <h4 class="text-xs font-bold text-zinc-900 mb-1">🚀 Palpitando la Expo Laboral</h4>
+              <p class="text-xs text-zinc-700 italic">"¡Cada vez falta menos para encontrarnos en una nueva edición de oportunidades, empleo y capacitación en Bariloche!..."</p>
+            </div>
+            <div class="mt-3 pt-2.5 border-t border-orange-300 flex items-center justify-between text-xs">
+              <span class="font-black text-orange-700">11.788 alcance</span>
+              <span class="text-zinc-700 font-bold">13.020 vistas · 135 shares</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RADIOGRAFÍA DEL PÚBLICO (AUDIENCIA OFICIAL) -->
+      <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
+        <div class="flex items-center justify-between border-b border-zinc-100 pb-3 mb-4">
+          <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-orange-500"></i>
+            Radiografía de la Audiencia Digital (@trabajobarilochemscb)
+          </h3>
+          <span class="text-xs font-bold text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded">
+            Auditoría Demográfica Oficial
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          
+          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200">
+            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-1">Concentración Geográfica</span>
+            <div class="space-y-1 text-zinc-700">
+              <div class="flex justify-between font-bold text-zinc-900">
+                <span>San Carlos de Bariloche:</span>
+                <span>71.4%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Pilcaniyeu:</span>
+                <span>2.3%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Buenos Aires:</span>
+                <span>2.3%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>El Bolsón / Comallo:</span>
+                <span>1.4%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200">
+            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-1">Penetración y Tracción</span>
+            <div class="space-y-1 text-zinc-700">
+              <div class="flex justify-between font-bold text-orange-700">
+                <span>Cuentas No Seguidoras:</span>
+                <span>85.6%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Seguidores habituales:</span>
+                <span>14.4%</span>
+              </div>
+              <div class="text-[11px] text-zinc-500 mt-2 pt-2 border-t border-zinc-200">
+                * El contenido superó ampliamente la base cautiva, logrando viralidad comunitaria en la ciudad.
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200">
+            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-1">Franjas Etarias en Redes</span>
+            <div class="space-y-1 text-zinc-700">
+              <div class="flex justify-between font-bold text-zinc-900">
+                <span>25 a 34 años:</span>
+                <span>36.7%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>35 a 44 años:</span>
+                <span>32.7%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>45 a 54 años:</span>
+                <span>16.1%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>18 a 24 años:</span>
+                <span>8.6%</span>
+              </div>
             </div>
           </div>
 
@@ -781,10 +1038,10 @@
     <footer class="bg-zinc-900 text-zinc-400 p-5 rounded-2xl shadow-sm border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
       <div>
         <span class="font-bold text-white block">Municipalidad de San Carlos de Bariloche</span>
-        <span class="text-[11px] text-zinc-400">Secretaría de Producción y Empleo · Cuenta @trabajobarilochemscb</span>
+        <span class="text-[11px] text-zinc-400">Secretaría de Producción y Empleo · Cuenta @trabajobarilochemscb · bariloche.gov.ar/expo-laboral-php</span>
       </div>
       <div class="text-center sm:text-right text-[11px]">
-        <p>Base final auditada: <strong>2.730 registros</strong> · Acreditados: <strong>1.067</strong></p>
+        <p>Base final: <strong>2.730 registros</strong> · Alcance Instagram: <strong>80.665 cuentas</strong></p>
         <p>Sede: <strong>Puerto San Carlos</strong> · 22 y 23 de Octubre de 2026</p>
       </div>
     </footer>
@@ -796,16 +1053,12 @@
   <!-- SCRIPTS Y CONFIGURACIÓN DE CHART.JS -->
   <!-- =================================================================================== -->
   <script>
-    // Inicializar iconos
     lucide.createIcons();
 
-    // Configuración general Chart.js
     Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
     Chart.defaults.color = '#71717a';
 
-    // ----------------------------------------------------
-    // PRE-EXPO: 1. Situación Laboral Inicial en Web (Dona)
-    // ----------------------------------------------------
+    // 1. Pre-Expo Situación Laboral Inicial
     new Chart(document.getElementById('laborSituationChart'), {
       type: 'doughnut',
       data: {
@@ -822,16 +1075,12 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { boxWidth: 10, padding: 12, font: { size: 11, weight: '600' } }
-          },
+          legend: { position: 'bottom', labels: { boxWidth: 10, padding: 12, font: { size: 11, weight: '600' } } },
           tooltip: {
             callbacks: {
               label: function(c) {
                 const total = 260;
-                const pct = ((c.raw / total) * 100).toFixed(1);
-                return ` ${c.label}: ${c.raw} (${pct}%)`;
+                return ` ${c.label}: ${c.raw} (${((c.raw / total) * 100).toFixed(1)}%)`;
               }
             }
           }
@@ -840,9 +1089,7 @@
       }
     });
 
-    // ----------------------------------------------------
-    // PRE-EXPO: 2. Charlas y Talleres (Barras Horizontales)
-    // ----------------------------------------------------
+    // 2. Pre-Expo Charlas y Talleres
     new Chart(document.getElementById('talksOccupancyChart'), {
       type: 'bar',
       data: {
@@ -858,11 +1105,7 @@
         datasets: [{
           label: 'Inscriptos',
           data: [23, 20, 87, 81, 72, 43, 24],
-          backgroundColor: [
-            '#10b981', // Emerald (Agotado 115%)
-            '#10b981', // Emerald (Agotado 100%)
-            '#ea580c', '#f97316', '#fb923c', '#fdba74', '#fed7aa'
-          ],
+          backgroundColor: ['#10b981', '#10b981', '#ea580c', '#f97316', '#fb923c', '#fdba74', '#fed7aa'],
           borderRadius: 6,
           barThickness: 16
         }]
@@ -878,8 +1121,7 @@
               label: function(c) {
                 const maxCupos = [20, 20, 100, 100, 100, 80, 60];
                 const maxC = maxCupos[c.dataIndex];
-                const pct = ((c.raw / maxC) * 100).toFixed(1);
-                return ` ${c.raw} inscriptos de ${maxC} cupos (${pct}%)`;
+                return ` ${c.raw} inscriptos de ${maxC} cupos (${((c.raw / maxC) * 100).toFixed(1)}%)`;
               }
             }
           }
@@ -891,9 +1133,7 @@
       }
     });
 
-    // ----------------------------------------------------
-    // PRE-EXPO: 3. Alcance de Publicaciones en Instagram
-    // ----------------------------------------------------
+    // 3. Pre-Expo Alcance de Publicaciones
     new Chart(document.getElementById('postsReachChart'), {
       type: 'bar',
       data: {
@@ -931,11 +1171,7 @@
             beginAtZero: true,
             max: 12000,
             grid: { color: '#f4f4f5' },
-            ticks: {
-              stepSize: 3000,
-              font: { size: 10 },
-              callback: function(v) { return v.toLocaleString('es-AR'); }
-            }
+            ticks: { stepSize: 3000, font: { size: 10 }, callback: function(v) { return v.toLocaleString('es-AR'); } }
           },
           x: {
             grid: { display: false },
@@ -952,9 +1188,7 @@
       }
     });
 
-    // ----------------------------------------------------
-    // POST-EXPO: 4. Pirámide y Distribución de Edades por DNI
-    // ----------------------------------------------------
+    // 4. Post-Expo Distribución de Edades por DNI
     new Chart(document.getElementById('ageDistributionChart'), {
       type: 'bar',
       data: {
@@ -971,16 +1205,7 @@
         datasets: [{
           label: 'Cantidad de Asistentes',
           data: [47, 1168, 357, 634, 311, 100, 60, 53],
-          backgroundColor: [
-            '#fdba74', // Menores 18 (Orange 300)
-            '#ea580c', // 18-24 (Orange 600 - PICO)
-            '#f97316', // 25-29 (Orange 500)
-            '#fb923c', // 30-39 (Orange 400)
-            '#fed7aa', // 40-49 (Orange 200)
-            '#e4e4e7', // 50-59 (Zinc 200)
-            '#d4d4d8', // 60+ (Zinc 300)
-            '#10b981'  // Extranjeros (Emerald 500)
-          ],
+          backgroundColor: ['#fdba74', '#ea580c', '#f97316', '#fb923c', '#fed7aa', '#e4e4e7', '#d4d4d8', '#10b981'],
           borderRadius: 8,
           barThickness: 26
         }]
@@ -994,8 +1219,7 @@
             callbacks: {
               label: function(c) {
                 const total = 2730;
-                const pct = ((c.raw / total) * 100).toFixed(1);
-                return ` ${c.raw.toLocaleString('es-AR')} personas (${pct}% del total)`;
+                return ` ${c.raw.toLocaleString('es-AR')} personas (${((c.raw / total) * 100).toFixed(1)}%)`;
               }
             }
           }
@@ -1004,25 +1228,14 @@
           y: {
             beginAtZero: true,
             grid: { color: '#f4f4f5' },
-            ticks: {
-              font: { size: 10 },
-              callback: function(v) { return v.toLocaleString('es-AR'); }
-            }
+            ticks: { font: { size: 10 }, callback: function(v) { return v.toLocaleString('es-AR'); } }
           },
-          x: {
-            grid: { display: false },
-            ticks: {
-              font: { size: 10.5, weight: '600' },
-              color: '#27272a'
-            }
-          }
+          x: { grid: { display: false }, ticks: { font: { size: 10.5, weight: '600' }, color: '#27272a' } }
         }
       }
     });
 
-    // ----------------------------------------------------
-    // POST-EXPO: 5. Búsqueda Activa según Situación Laboral (Ocupados vs Desocupados)
-    // ----------------------------------------------------
+    // 5. Post-Expo Búsqueda Activa según Situación Laboral
     new Chart(document.getElementById('employedSeekingChart'), {
       type: 'bar',
       data: {
@@ -1038,14 +1251,14 @@
           {
             label: 'En búsqueda activa de empleo',
             data: [357, 270, 183, 158, 217, 1179],
-            backgroundColor: '#ea580c', // Orange 600
+            backgroundColor: '#ea580c',
             borderRadius: 6,
             barThickness: 14
           },
           {
             label: 'No busca actualmente',
             data: [42, 23, 17, 16, 210, 32],
-            backgroundColor: '#e4e4e7', // Zinc 200
+            backgroundColor: '#e4e4e7',
             borderRadius: 6,
             barThickness: 14
           }
@@ -1056,57 +1269,33 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: {
-            position: 'top',
-            labels: { boxWidth: 10, padding: 10, font: { size: 10.5, weight: '600' } }
-          },
+          legend: { position: 'top', labels: { boxWidth: 10, padding: 10, font: { size: 10.5, weight: '600' } } },
           tooltip: {
             callbacks: {
               label: function(c) {
-                const dsIndex = c.datasetIndex;
                 const rowTotals = [399, 293, 200, 174, 427, 1211];
                 const total = rowTotals[c.dataIndex];
-                const pct = ((c.raw / total) * 100).toFixed(1);
-                return ` ${c.dataset.label}: ${c.raw} de ${total} (${pct}%)`;
+                return ` ${c.dataset.label}: ${c.raw} de ${total} (${((c.raw / total) * 100).toFixed(1)}%)`;
               }
             }
           }
         },
         scales: {
-          x: {
-            stacked: true,
-            beginAtZero: true,
-            grid: { color: '#f4f4f5' },
-            ticks: { font: { size: 10 } }
-          },
-          y: {
-            stacked: true,
-            grid: { display: false },
-            ticks: { font: { size: 10, weight: '600' }, color: '#27272a' }
-          }
+          x: { stacked: true, beginAtZero: true, grid: { color: '#f4f4f5' }, ticks: { font: { size: 10 } } },
+          y: { stacked: true, grid: { display: false }, ticks: { font: { size: 10, weight: '600' }, color: '#27272a' } }
         }
       }
     });
 
-    // ----------------------------------------------------
-    // POST-EXPO: 6. Flujo de Participantes: Pre-Expo vs Día 1 vs Día 2
-    // ----------------------------------------------------
+    // 6. Post-Expo Ritmo de Convocatoria
     new Chart(document.getElementById('timelineAttendanceChart'), {
       type: 'bar',
       data: {
-        labels: [
-          'Pre-Expo Web (07-21 Oct)',
-          'Día 1 Expo (22/Oct)',
-          'Día 2 Expo (23/Oct)'
-        ],
+        labels: ['Pre-Expo Web (07-21 Oct)', 'Día 1 Expo (22/Oct)', 'Día 2 Expo (23/Oct)'],
         datasets: [{
           label: 'Registros Acumulados',
           data: [1211, 762, 757],
-          backgroundColor: [
-            '#71717a', // Zinc 500 (Pre-expo online)
-            '#ea580c', // Orange 600 (Día 1)
-            '#f97316'  // Orange 500 (Día 2)
-          ],
+          backgroundColor: ['#71717a', '#ea580c', '#f97316'],
           borderRadius: 8,
           barThickness: 34
         }]
@@ -1120,29 +1309,19 @@
             callbacks: {
               label: function(c) {
                 const total = 2730;
-                const pct = ((c.raw / total) * 100).toFixed(1);
-                return ` ${c.raw.toLocaleString('es-AR')} participantes (${pct}% del padrón)`;
+                return ` ${c.raw.toLocaleString('es-AR')} participantes (${((c.raw / total) * 100).toFixed(1)}%)`;
               }
             }
           }
         },
         scales: {
-          y: {
-            beginAtZero: true,
-            grid: { color: '#f4f4f5' },
-            ticks: { font: { size: 10 } }
-          },
-          x: {
-            grid: { display: false },
-            ticks: { font: { size: 11, weight: '600' }, color: '#27272a' }
-          }
+          y: { beginAtZero: true, grid: { color: '#f4f4f5' }, ticks: { font: { size: 10 } } },
+          x: { grid: { display: false }, ticks: { font: { size: 11, weight: '600' }, color: '#27272a' } }
         }
       }
     });
 
-    // ----------------------------------------------------
-    // POST-EXPO: 7. Composición Ocupacional de Asistentes
-    // ----------------------------------------------------
+    // 7. Post-Expo Composición Ocupacional
     new Chart(document.getElementById('profilesDistributionChart'), {
       type: 'doughnut',
       data: {
@@ -1157,15 +1336,7 @@
         ],
         datasets: [{
           data: [1211, 427, 399, 293, 200, 174, 26],
-          backgroundColor: [
-            '#ea580c', // Orange 600
-            '#fb923c', // Orange 400
-            '#10b981', // Emerald 500
-            '#3b82f6', // Blue 500
-            '#a855f7', // Purple 500
-            '#f59e0b', // Amber 500
-            '#94a3b8'  // Slate 400
-          ],
+          backgroundColor: ['#ea580c', '#fb923c', '#10b981', '#3b82f6', '#a855f7', '#f59e0b', '#94a3b8'],
           borderColor: '#ffffff',
           borderWidth: 2,
           hoverOffset: 4
@@ -1175,16 +1346,12 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: {
-            position: 'right',
-            labels: { boxWidth: 10, padding: 8, font: { size: 10.5, weight: '600' } }
-          },
+          legend: { position: 'right', labels: { boxWidth: 10, padding: 8, font: { size: 10.5, weight: '600' } } },
           tooltip: {
             callbacks: {
               label: function(c) {
                 const total = 2730;
-                const pct = ((c.raw / total) * 100).toFixed(1);
-                return ` ${c.label}: ${pct}%`;
+                return ` ${c.label}: ${((c.raw / total) * 100).toFixed(1)}%`;
               }
             }
           }
@@ -1192,6 +1359,125 @@
         cutout: '65%'
       }
     });
+
+    // 8. Comparativa Pre vs. Post Expo Instagram (NUEVO)
+    new Chart(document.getElementById('prePostComparisonChart'), {
+      type: 'bar',
+      data: {
+        labels: [
+          'Cuentas Alcanzadas',
+          'Vistas de Reels',
+          'Interacciones',
+          'Historias (Octubre)'
+        ],
+        datasets: [
+          {
+            label: 'Pre-Expo (Corte 15/Oct)',
+            data: [38617, 32748, 1916, 12],
+            backgroundColor: '#d4d4d8', // Zinc 300
+            borderRadius: 6,
+            barThickness: 22
+          },
+          {
+            label: 'Post-Expo (Corte 27/Oct)',
+            data: [80665, 81061, 15478, 59],
+            backgroundColor: '#ea580c', // Orange 600
+            borderRadius: 6,
+            barThickness: 22
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'top', labels: { boxWidth: 10, padding: 12, font: { size: 11, weight: '600' } } },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                return ` ${c.dataset.label}: ${c.raw.toLocaleString('es-AR')}`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: '#f4f4f5' },
+            ticks: {
+              font: { size: 10 },
+              callback: function(v) { return v >= 1000 ? (v / 1000) + 'K' : v; }
+            }
+          },
+          x: { grid: { display: false }, ticks: { font: { size: 11, weight: '600' }, color: '#27272a' } }
+        }
+      }
+    });
+
+    // 9. Post-Expo Reels Ranking (NUEVO)
+    new Chart(document.getElementById('postExpoReelsChart'), {
+      type: 'bar',
+      data: {
+        labels: [
+          '08/Oct Palpitando Expo',
+          '03/Ago Consejos CV',
+          '14/Oct Marcela Cabral',
+          '16/Oct Derechos Oñate',
+          '23/Oct Cierre Día 2',
+          '18/Sep ¿Buscás trabajo?',
+          '28/Ago Lanzamiento',
+          '19/Oct IA Jaquis',
+          '23/Sep Muestra Carreras',
+          '30/Sep CENS N°5',
+          '21/Oct Tips Stands',
+          '22/Oct Apertura Día 1',
+          '15/Oct Hotelería'
+        ],
+        datasets: [
+          {
+            label: 'Reproducciones',
+            data: [13020, 8675, 7626, 7324, 5976, 7716, 6795, 5182, 4473, 4220, 3532, 3457, 3065],
+            backgroundColor: '#fb923c', // Orange 400
+            borderRadius: 4,
+            barThickness: 8
+          },
+          {
+            label: 'Cuentas Alcanzadas',
+            data: [11788, 7256, 6202, 5924, 5826, 5572, 4902, 4365, 4025, 3795, 3259, 3122, 2609],
+            backgroundColor: '#ea580c', // Orange 600
+            borderRadius: 4,
+            barThickness: 8
+          }
+        ]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'top', labels: { boxWidth: 10, padding: 10, font: { size: 10.5, weight: '600' } } },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                return ` ${c.dataset.label}: ${c.raw.toLocaleString('es-AR')}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: { color: '#f4f4f5' },
+            ticks: {
+              font: { size: 10 },
+              callback: function(v) { return v >= 1000 ? (v / 1000) + 'K' : v; }
+            }
+          },
+          y: { grid: { display: false }, ticks: { font: { size: 9.5, weight: '600' }, color: '#27272a' } }
+        }
+      }
+    });
+
   </script>
 </body>
 </html>
