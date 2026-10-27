@@ -956,76 +956,149 @@
 
       <!-- RADIOGRAFÍA DEL PÚBLICO (AUDIENCIA OFICIAL) -->
       <div class="bg-white p-5 rounded-2xl border border-zinc-200/90 shadow-sm">
-        <div class="flex items-center justify-between border-b border-zinc-100 pb-3 mb-4">
-          <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
-            <i data-lucide="map-pin" class="w-4 h-4 text-orange-500"></i>
-            Radiografía de la Audiencia Digital (@trabajobarilochemscb)
-          </h3>
-          <span class="text-xs font-bold text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded">
-            Auditoría Demográfica Oficial
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-zinc-100 pb-3 mb-4 gap-2">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-orange-500"></i>
+              Radiografía de la Audiencia Digital (@trabajobarilochemscb)
+            </h3>
+            <p class="text-xs text-zinc-400">Distribución demográfica 100% calibrada según el reporte oficial de Meta/Instagram</p>
+          </div>
+          <span class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-1 rounded-full self-start sm:self-auto">
+            14.725 Seguidores · 100% Consolidado
           </span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200">
-            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-1">Concentración Geográfica</span>
-            <div class="space-y-1 text-zinc-700">
-              <div class="flex justify-between font-bold text-zinc-900">
-                <span>San Carlos de Bariloche:</span>
-                <span>71.4%</span>
+          <!-- Bloque 1: Concentración Geográfica (Suma 100%) -->
+          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] uppercase font-bold text-zinc-500">Concentración Geográfica</span>
+                <span class="text-[10px] font-bold text-orange-700 bg-orange-100 px-1.5 py-0.5 rounded">Suma 100%</span>
               </div>
-              <div class="flex justify-between">
-                <span>Pilcaniyeu:</span>
-                <span>2.3%</span>
+              <div class="space-y-1.5 text-zinc-700">
+                <div class="flex justify-between font-bold text-zinc-900 border-b border-zinc-200/60 pb-1">
+                  <span>San Carlos de Bariloche:</span>
+                  <span class="text-orange-700 font-black">71.4%</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Pilcaniyeu:</span>
+                  <span>2.3%</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Buenos Aires:</span>
+                  <span>2.3%</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>El Bolsón:</span>
+                  <span>0.8%</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Comallo:</span>
+                  <span>0.6%</span>
+                </div>
+                <div class="flex justify-between text-zinc-500 italic border-t border-zinc-200/60 pt-1">
+                  <span>Otras ciudades y localidades:</span>
+                  <span class="font-semibold text-zinc-700">22.6%</span>
+                </div>
               </div>
-              <div class="flex justify-between">
-                <span>Buenos Aires:</span>
-                <span>2.3%</span>
-              </div>
-              <div class="flex justify-between">
-                <span>El Bolsón / Comallo:</span>
-                <span>1.4%</span>
-              </div>
+            </div>
+            <div class="text-[10.5px] text-zinc-400 mt-2.5 pt-2 border-t border-zinc-200">
+              * Meta exporta el Top 5 de ciudades; el 22.6% restante agrupa Dina Huapi, Viedma y otras localidades de la región y el país.
             </div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200">
-            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-1">Penetración y Tracción</span>
-            <div class="space-y-1 text-zinc-700">
-              <div class="flex justify-between font-bold text-orange-700">
-                <span>Cuentas No Seguidoras:</span>
-                <span>85.6%</span>
+          <!-- Bloque 2: Tracción, Penetración y Género (Suma 100%) -->
+          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] uppercase font-bold text-zinc-500">Tracción y Género</span>
+                <span class="text-[10px] font-bold text-orange-700 bg-orange-100 px-1.5 py-0.5 rounded">Suma 100%</span>
               </div>
-              <div class="flex justify-between">
-                <span>Seguidores habituales:</span>
-                <span>14.4%</span>
+              
+              <div class="mb-3">
+                <span class="text-[10px] font-bold text-zinc-400 uppercase block mb-1">Alcance por Tipo de Cuenta:</span>
+                <div class="space-y-1 text-zinc-700">
+                  <div class="flex justify-between font-bold text-orange-700">
+                    <span>Cuentas No Seguidoras:</span>
+                    <span>85.6%</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Seguidores Habituales:</span>
+                    <span>14.4%</span>
+                  </div>
+                </div>
               </div>
-              <div class="text-[11px] text-zinc-500 mt-2 pt-2 border-t border-zinc-200">
-                * El contenido superó ampliamente la base cautiva, logrando viralidad comunitaria en la ciudad.
+
+              <div class="pt-2 border-t border-zinc-200/60">
+                <span class="text-[10px] font-bold text-zinc-400 uppercase block mb-1">Composición por Sexo (Seguidores):</span>
+                <div class="space-y-1 text-zinc-700">
+                  <div class="flex justify-between font-bold text-zinc-900">
+                    <span>Mujeres:</span>
+                    <span class="text-orange-700">72.8%</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Hombres:</span>
+                    <span>27.1%</span>
+                  </div>
+                  <div class="flex justify-between text-zinc-400">
+                    <span>No especificado:</span>
+                    <span>0.1%</span>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="text-[10.5px] text-zinc-400 mt-2.5 pt-2 border-t border-zinc-200">
+              * Récord de penetración comunitaria femenina y no seguidora durante la semana de la Expo.
             </div>
           </div>
 
-          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200">
-            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-1">Franjas Etarias en Redes</span>
-            <div class="space-y-1 text-zinc-700">
-              <div class="flex justify-between font-bold text-zinc-900">
-                <span>25 a 34 años:</span>
-                <span>36.7%</span>
+          <!-- Bloque 3: Franjas Etarias Completas (Suma 100%) -->
+          <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] uppercase font-bold text-zinc-500">Franjas Etarias en Redes</span>
+                <span class="text-[10px] font-bold text-orange-700 bg-orange-100 px-1.5 py-0.5 rounded">Suma 100%</span>
               </div>
-              <div class="flex justify-between">
-                <span>35 a 44 años:</span>
-                <span>32.7%</span>
+              <div class="space-y-1 text-zinc-700">
+                <div class="flex justify-between font-bold text-zinc-900">
+                  <span>25 a 34 años:</span>
+                  <span class="text-orange-700 font-black">36.7%</span>
+                </div>
+                <div class="flex justify-between font-semibold text-zinc-800">
+                  <span>35 a 44 años:</span>
+                  <span>32.7%</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>45 a 54 años:</span>
+                  <span>16.1%</span>
+                </div>
+                <div class="flex justify-between font-semibold text-orange-800">
+                  <span>18 a 24 años:</span>
+                  <span>8.6%</span>
+                </div>
+                <div class="flex justify-between text-zinc-600">
+                  <span>55 a 64 años:</span>
+                  <span>4.0%</span>
+                </div>
+                <div class="flex justify-between text-zinc-500">
+                  <span>65 años o más:</span>
+                  <span>1.3%</span>
+                </div>
+                <div class="flex justify-between text-zinc-400">
+                  <span>13 a 17 años (menores):</span>
+                  <span>0.2%</span>
+                </div>
+                <div class="flex justify-between text-[11px] font-bold text-zinc-800 border-t border-zinc-200/60 pt-1">
+                  <span>Total Audiencia Medida:</span>
+                  <span class="text-emerald-700">100.0%</span>
+                </div>
               </div>
-              <div class="flex justify-between">
-                <span>45 a 54 años:</span>
-                <span>16.1%</span>
-              </div>
-              <div class="flex justify-between">
-                <span>18 a 24 años:</span>
-                <span>8.6%</span>
-              </div>
+            </div>
+            <div class="text-[10.5px] text-zinc-400 mt-2.5 pt-2 border-t border-zinc-200">
+              * El 69.4% se ubica entre los 25 y 44 años, franja de mayor productividad laboral.
             </div>
           </div>
 
