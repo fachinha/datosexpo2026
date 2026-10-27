@@ -288,14 +288,6 @@
         </div>
       </div>
 
-      <!-- NOTA ACLARATORIA DE AUDITORÍA: DEDUPLICACIÓN DE INSCRIPTOS -->
-      <div class="bg-orange-50/70 border border-orange-200 p-3.5 rounded-2xl text-xs text-orange-900 flex items-start gap-2.5">
-        <i data-lucide="info" class="w-4 h-4 text-orange-600 flex-shrink-0 mt-0.5"></i>
-        <div>
-          <strong>Calibración de Nómina y Acreditaciones Presenciales:</strong> La base oficial web registró <strong>2.001 inscriptos únicos</strong> (tras deduplicar las 2.476 inscripciones a charlas), con <strong>965 acreditados el Día 1</strong> y <strong>635 acreditados el Día 2</strong>. A estos últimos se incorporan los <strong>254 asistentes registrados manualmente en puerta durante el Día 2</strong> (filas 2 a 255), totalizando <strong>889 acreditados el Día 2</strong>. Sumados a los 965 del primer día, la Expo Laboral 2026 alcanzó <strong>1.854 acreditaciones presenciales efectivas</strong> sobre un padrón total de <strong>2.255 participantes</strong> (82.2% de concurrencia).
-        </div>
-      </div>
-
       <!-- TARJETAS KPIS MAESTRAS POST-EXPO (2.001 INSCRIPTOS Y 1.600 ACREDITADOS) -->
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
         
@@ -500,27 +492,25 @@
           <div class="flex items-center justify-between mb-3">
             <div>
               <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
-                <i data-lucide="layers" class="w-4 h-4 text-orange-500"></i>
-                Composición Ocupacional de los Inscriptos Únicos
+                <i data-lucide="presentation" class="w-4 h-4 text-orange-500"></i>
+                Inscripción a Charlas y Actividades
               </h3>
-              <p class="text-xs text-zinc-400">Distribución por perfil declarado en la plataforma</p>
+              <p class="text-xs text-zinc-400">Cantidad de personas inscriptas por charla y actividad</p>
             </div>
             <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded">
-              2.255 Personas
+              873 en Charlas · 1.603 en Stands
             </span>
           </div>
 
-          <div class="relative h-60">
-            <canvas id="profilesDistributionChart"></canvas>
+          <div class="relative h-64">
+            <canvas id="postExpoCharlasChart"></canvas>
           </div>
 
           <div class="mt-4 pt-3 border-t border-zinc-100 flex flex-wrap items-center justify-center gap-1.5 text-[11px]">
-            <span class="px-2 py-1 rounded-md bg-orange-100 text-orange-900 font-bold border border-orange-200">Otros / Buscadores: 1.061</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Secundarios: 364</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Empleados: 310</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Universitarios: 213</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Emprendedores: 150</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Profesionales: 133</span>
+            <span class="px-2 py-1 rounded-md bg-orange-50 text-orange-800 font-bold border border-orange-200">Día 1: 513 inscriptos</span>
+            <span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-800 font-bold border border-emerald-200">Día 2: 360 inscriptos</span>
+            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Recorrer stands: 1.603</span>
+            <span class="px-2 py-1 rounded-md bg-zinc-200/70 text-zinc-800 font-bold">2.476 registros totales</span>
           </div>
         </div>
 
@@ -1398,42 +1388,67 @@
       }
     });
 
-    // 7. Post-Expo Composición Ocupacional (2.255 Consolidados)
-    new Chart(document.getElementById('profilesDistributionChart'), {
-      type: 'doughnut',
+    // 7. Post-Expo Inscripción a Charlas y Actividades (873 en charlas + 1.603 stands = 2.476 total)
+    new Chart(document.getElementById('postExpoCharlasChart'), {
+      type: 'bar',
       data: {
         labels: [
-          'Otros / Buscadores (1.061)',
-          'Estud. Secundarios (364)',
-          'Empleados (310)',
-          'Estud. Universitarios (213)',
-          'Emprendedores (150)',
-          'Profesionales (133)',
-          'Instituciones y Empresas (24)'
+          'D1 09:30 · Nuevas formas de empleo',
+          'D1 11:00 · El CV invisible',
+          'D1 14:00 · Conversaciones abren puertas',
+          'D1 12:30 · Empleabilidad 360',
+          'D2 12:30 · Habilidades blandas',
+          'D2 14:00 · Pensando tu futuro',
+          'D2 09:30 · Conectamos oportunidades',
+          'D2 11:00 · Qué trabajo buscar'
         ],
         datasets: [{
-          data: [1061, 364, 310, 213, 150, 133, 24],
-          backgroundColor: ['#ea580c', '#fb923c', '#10b981', '#3b82f6', '#a855f7', '#f59e0b', '#94a3b8'],
-          borderColor: '#ffffff',
-          borderWidth: 2,
-          hoverOffset: 4
+          label: 'Personas Inscriptas',
+          data: [132, 128, 128, 125, 120, 120, 60, 60],
+          backgroundColor: [
+            '#c2410c',
+            '#ea580c',
+            '#ea580c',
+            '#f97316',
+            '#059669',
+            '#10b981',
+            '#34d399',
+            '#34d399'
+          ],
+          borderRadius: 6,
+          barThickness: 15
         }]
       },
       options: {
+        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { position: 'right', labels: { boxWidth: 10, padding: 8, font: { size: 10.5, weight: '600' } } },
+          legend: { display: false },
           tooltip: {
             callbacks: {
               label: function(c) {
-                const total = 2255;
-                return ` ${c.label}: ${((c.raw / total) * 100).toFixed(1)}%`;
+                const totalCharlas = 873;
+                return ` ${c.raw} inscriptos (${((c.raw / totalCharlas) * 100).toFixed(1)}% de las charlas)`;
               }
             }
           }
         },
-        cutout: '65%'
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 150,
+            grid: { color: '#f4f4f5' },
+            ticks: { font: { size: 10 } }
+          },
+          y: {
+            grid: { display: false },
+            ticks: {
+              font: { size: 10, weight: '600' },
+              color: '#27272a'
+            }
+          }
+        }
       }
     });
 
