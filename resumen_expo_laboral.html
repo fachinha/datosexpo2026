@@ -288,8 +288,8 @@
         </div>
       </div>
 
-      <!-- TARJETAS KPIS MAESTRAS POST-EXPO (2.001 INSCRIPTOS Y 1.600 ACREDITADOS) -->
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+      <!-- TARJETAS KPIS MAESTRAS POST-EXPO (2.255 INSCRIPTOS Y 1.854 ACREDITADOS) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
         
         <!-- KPI 1: Total Participantes -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
@@ -360,7 +360,7 @@
         </div>
 
         <!-- KPI 5: Jóvenes menores de 30 años -->
-        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between col-span-2 lg:col-span-1">
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between text-zinc-400 mb-1">
               <span class="text-[11px] font-bold uppercase tracking-wider">Jóvenes &lt; 30 Años</span>
@@ -376,12 +376,30 @@
           </span>
         </div>
 
+        <!-- KPI 6: Composición por Sexo -->
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border-2 border-pink-300 shadow-sm flex flex-col justify-between bg-pink-50/20">
+          <div>
+            <div class="flex items-center justify-between text-zinc-400 mb-1">
+              <span class="text-[11px] font-black uppercase tracking-wider text-pink-800">Composición por Sexo</span>
+              <i data-lucide="users-2" class="w-4 h-4 text-pink-600"></i>
+            </div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-2xl sm:text-3xl font-black text-pink-600">59.5%</span>
+              <span class="text-xs font-bold text-zinc-700">Mujeres</span>
+            </div>
+          </div>
+          <span class="text-[11px] text-pink-900 font-medium mt-2 block border-t border-pink-200/80 pt-2">
+            <strong>1.342</strong> Mujeres · <strong>913</strong> Hombres
+          </span>
+        </div>
+
       </div>
 
-      <!-- DASHBOARDS: PIRÁMIDE DE EDADES POR DNI Y BÚSQUEDA ACTIVA -->
+      <!-- DASHBOARDS: RADIOGRAFÍA DEMOGRÁFICA (EDADES Y GÉNERO / SEXO) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
         
-        <div class="lg:col-span-7 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+        <!-- Tarjeta 1: Pirámide de Edades por DNI (lg:col-span-8) -->
+        <div class="lg:col-span-8 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
             <div>
               <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
@@ -423,7 +441,46 @@
           </div>
         </div>
 
-        <div class="lg:col-span-5 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+        <!-- Tarjeta 2: Composición por Sexo de los Inscriptos (lg:col-span-4) -->
+        <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+                <i data-lucide="users-2" class="w-4 h-4 text-orange-500"></i>
+                Composición por Sexo
+              </h3>
+              <p class="text-xs text-zinc-400">Distribución de participantes inscriptos</p>
+            </div>
+            <span class="text-xs font-bold text-pink-700 bg-pink-50 border border-pink-200 px-2 py-0.5 rounded">
+              2.255 Personas
+            </span>
+          </div>
+
+          <div class="relative h-60">
+            <canvas id="genderDistributionChart"></canvas>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-zinc-100 text-center text-xs">
+            <div class="bg-pink-50 p-2.5 rounded-xl border border-pink-200">
+              <span class="text-[10px] uppercase font-bold text-pink-700 block">Mujeres</span>
+              <span class="text-lg font-black text-pink-700">1.342</span>
+              <span class="text-[10px] text-pink-600 block font-semibold">59.5%</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-200">
+              <span class="text-[10px] uppercase font-bold text-blue-700 block">Hombres</span>
+              <span class="text-lg font-black text-blue-700">913</span>
+              <span class="text-[10px] text-blue-600 block font-semibold">40.5%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DASHBOARDS: DINÁMICA LABORAL Y ASISTENCIA (2 COLUMNAS) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Tarjeta 3: Búsqueda Activa según Situación Laboral -->
+        <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-4">
             <div>
               <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
@@ -450,11 +507,7 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- DASHBOARDS: RITMO DE CONVOCATORIA Y COMPOSICIÓN OCUPACIONAL -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        
+        <!-- Tarjeta 4: Ritmo de Convocatoria y Asistencia: Día 1 vs. Día 2 -->
         <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
           <div class="flex items-center justify-between mb-3">
             <div>
@@ -469,7 +522,7 @@
             </span>
           </div>
 
-          <div class="relative h-60">
+          <div class="relative h-64 sm:h-72">
             <canvas id="timelineAttendanceChart"></canvas>
           </div>
 
@@ -488,32 +541,33 @@
           </div>
         </div>
 
-        <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
-          <div class="flex items-center justify-between mb-3">
-            <div>
-              <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
-                <i data-lucide="presentation" class="w-4 h-4 text-orange-500"></i>
-                Inscripción a Charlas y Actividades
-              </h3>
-              <p class="text-xs text-zinc-400">Cantidad de personas inscriptas por charla y actividad</p>
-            </div>
-            <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded">
-              873 en Charlas · 1.603 en Stands
-            </span>
-          </div>
+      </div>
 
-          <div class="relative h-64">
-            <canvas id="postExpoCharlasChart"></canvas>
+      <!-- DASHBOARD: INSCRIPCIÓN A CHARLAS Y ACTIVIDADES (ANCHO COMPLETO) -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
+              <i data-lucide="presentation" class="w-4 h-4 text-orange-500"></i>
+              Inscripción a Charlas y Actividades
+            </h3>
+            <p class="text-xs text-zinc-400">Demanda de capacitación y cantidad de personas inscriptas por temática en los auditorios</p>
           </div>
-
-          <div class="mt-4 pt-3 border-t border-zinc-100 flex flex-wrap items-center justify-center gap-1.5 text-[11px]">
-            <span class="px-2 py-1 rounded-md bg-orange-50 text-orange-800 font-bold border border-orange-200">Día 1: 513 inscriptos</span>
-            <span class="px-2 py-1 rounded-md bg-emerald-50 text-emerald-800 font-bold border border-emerald-200">Día 2: 360 inscriptos</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-100 text-zinc-700 font-semibold">Recorrer stands: 1.603</span>
-            <span class="px-2 py-1 rounded-md bg-zinc-200/70 text-zinc-800 font-bold">2.476 registros totales</span>
-          </div>
+          <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2.5 py-1 rounded-full self-start sm:self-auto">
+            873 en Charlas · 1.603 en Stands
+          </span>
         </div>
 
+        <div class="relative h-64 sm:h-72">
+          <canvas id="postExpoCharlasChart"></canvas>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-zinc-100 flex flex-wrap items-center justify-center gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-orange-800 font-bold border border-orange-200">Día 1: 513 inscriptos en 4 charlas</span>
+          <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 font-bold border border-emerald-200">Día 2: 360 inscriptos en 4 charlas</span>
+          <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-semibold">Recorrer stands: 1.603 inscriptos</span>
+          <span class="px-2.5 py-1 rounded-lg bg-zinc-200/80 text-zinc-900 font-bold">2.476 registros totales a actividades</span>
+        </div>
       </div>
 
       <!-- TOP INSTITUCIONES EDUCATIVAS REPRESENTADAS -->
@@ -1385,6 +1439,37 @@
           y: { beginAtZero: true, grid: { color: '#f4f4f5' }, ticks: { font: { size: 10 } } },
           x: { grid: { display: false }, ticks: { font: { size: 11, weight: '600' }, color: '#27272a' } }
         }
+      }
+    });
+
+        // 8. Post-Expo Distribución por Sexo (sobre los 2.255 participantes)
+    new Chart(document.getElementById('genderDistributionChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Mujeres (1.342)', 'Hombres (913)'],
+        datasets: [{
+          data: [1342, 913],
+          backgroundColor: ['#ec4899', '#3b82f6'],
+          borderColor: '#ffffff',
+          borderWidth: 2,
+          hoverOffset: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 10, padding: 10, font: { size: 11, weight: '600' } } },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                const total = 2255;
+                return ` ${c.label}: ${((c.raw / total) * 100).toFixed(1)}%`;
+              }
+            }
+          }
+        },
+        cutout: '68%'
       }
     });
 
