@@ -526,8 +526,8 @@
             <canvas id="timelineAttendanceChart"></canvas>
           </div>
 
-          <!-- Comparativa de Acreditados Día 1 vs Día 2 -->
-          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-zinc-100 text-center text-xs">
+          <!-- Comparativa de Acreditados Día 1 vs Día 2 y Personas que repiten -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-4 pt-3 border-t border-zinc-100 text-center text-xs">
             <div class="p-2.5 rounded-xl bg-orange-50 border border-orange-200">
               <span class="text-[10px] text-orange-700 font-bold block uppercase">Día 1 (22/Oct)</span>
               <span class="text-lg font-black text-orange-700">965</span>
@@ -538,35 +538,56 @@
               <span class="text-lg font-black text-emerald-700">889</span>
               <span class="text-[10px] text-emerald-600 block">635 web + 254 en puerta (47.9%)</span>
             </div>
+            <div class="p-2.5 rounded-xl bg-purple-50 border border-purple-200">
+              <span class="text-[10px] text-purple-700 font-bold block uppercase">Repiten Día 1 y Día 2</span>
+              <span class="text-lg font-black text-purple-700">118</span>
+              <span class="text-[10px] text-purple-600 block">Inscriptos en ambas jornadas</span>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <!-- DASHBOARD: INSCRIPCIÓN A CHARLAS Y ACTIVIDADES (ANCHO COMPLETO) -->
+      <!-- DASHBOARD: ASISTENCIA REAL Y EFECTIVA A CHARLAS (INSCRIPTOS VS PRESENTES) -->
       <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm flex flex-col justify-between">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
           <div>
             <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
               <i data-lucide="presentation" class="w-4 h-4 text-orange-500"></i>
-              Inscripción a Charlas y Actividades
+              Asistencia Efectiva a Charlas: Inscriptos vs. Acreditados Presentes
             </h3>
-            <p class="text-xs text-zinc-400">Demanda de capacitación y cantidad de personas inscriptas por temática en los auditorios</p>
+            <p class="text-xs text-zinc-400">Comparativa de convocatoria previa vs. asistencia real acreditada en cada sala de la Expo</p>
           </div>
-          <span class="text-xs font-bold text-orange-700 bg-orange-100 px-2.5 py-1 rounded-full self-start sm:self-auto">
-            873 en Charlas · 1.603 en Stands
+          <span class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-1 rounded-full self-start sm:self-auto">
+            221 Presentes en Charlas (25.3% Asistencia Real)
           </span>
         </div>
 
-        <div class="relative h-64 sm:h-72">
+        <div class="relative h-72 sm:h-80">
           <canvas id="postExpoCharlasChart"></canvas>
         </div>
 
-        <div class="mt-4 pt-3 border-t border-zinc-100 flex flex-wrap items-center justify-center gap-2 text-xs">
-          <span class="px-2.5 py-1 rounded-lg bg-orange-50 text-orange-800 font-bold border border-orange-200">Día 1: 513 inscriptos en 4 charlas</span>
-          <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 font-bold border border-emerald-200">Día 2: 360 inscriptos en 4 charlas</span>
-          <span class="px-2.5 py-1 rounded-lg bg-zinc-100 text-zinc-700 font-semibold">Recorrer stands: 1.603 inscriptos</span>
-          <span class="px-2.5 py-1 rounded-lg bg-zinc-200/80 text-zinc-900 font-bold">2.476 registros totales a actividades</span>
+        <div class="mt-4 pt-3 border-t border-zinc-100 grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+          <div class="bg-orange-50 p-2.5 rounded-xl border border-orange-200">
+            <span class="text-[10px] uppercase font-bold text-orange-700 block">Día 1 · Charlas</span>
+            <span class="text-base font-black text-orange-700">86 / 513</span>
+            <span class="text-[10px] text-orange-600 block">16.8% Presentismo</span>
+          </div>
+          <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200">
+            <span class="text-[10px] uppercase font-bold text-emerald-700 block">Día 2 · Charlas</span>
+            <span class="text-base font-black text-emerald-700">135 / 360</span>
+            <span class="text-[10px] text-emerald-600 block">37.5% Presentismo</span>
+          </div>
+          <div class="bg-zinc-50 p-2.5 rounded-xl border border-zinc-200">
+            <span class="text-[10px] uppercase font-bold text-zinc-600 block">Total en Charlas</span>
+            <span class="text-base font-black text-zinc-800">221 / 873</span>
+            <span class="text-[10px] text-zinc-500 block">25.3% Promedio</span>
+          </div>
+          <div class="bg-zinc-50 p-2.5 rounded-xl border border-zinc-200">
+            <span class="text-[10px] uppercase font-bold text-zinc-600 block">Recorrer Stands</span>
+            <span class="text-base font-black text-zinc-800">592 / 1.603</span>
+            <span class="text-[10px] text-zinc-500 block">36.9% Presentismo</span>
+          </div>
         </div>
       </div>
 
@@ -576,7 +597,7 @@
           <div>
             <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
               <i data-lucide="graduation-cap" class="w-4 h-4 text-orange-500"></i>
-              Instituciones Educativas y Colegios Secundarios con Mayor Convocatoria
+              Participación de Estudiantes Secundarios
             </h3>
             <p class="text-xs text-zinc-400">Relevamiento de escuelas técnicas, públicas y privadas presentes en la Expo</p>
           </div>
@@ -1473,7 +1494,7 @@
       }
     });
 
-    // 7. Post-Expo Inscripción a Charlas y Actividades (873 en charlas + 1.603 stands = 2.476 total)
+    // 7. Post-Expo Asistencia Efectiva a Charlas: Inscriptos vs. Acreditados Presentes
     new Chart(document.getElementById('postExpoCharlasChart'), {
       type: 'bar',
       data: {
@@ -1487,34 +1508,43 @@
           'D2 09:30 · Conectamos oportunidades',
           'D2 11:00 · Qué trabajo buscar'
         ],
-        datasets: [{
-          label: 'Personas Inscriptas',
-          data: [132, 128, 128, 125, 120, 120, 60, 60],
-          backgroundColor: [
-            '#c2410c',
-            '#ea580c',
-            '#ea580c',
-            '#f97316',
-            '#059669',
-            '#10b981',
-            '#34d399',
-            '#34d399'
-          ],
-          borderRadius: 6,
-          barThickness: 15
-        }]
+        datasets: [
+          {
+            label: 'Inscriptos',
+            data: [132, 128, 128, 125, 120, 120, 60, 60],
+            backgroundColor: '#fb923c',
+            borderRadius: 4,
+            barThickness: 11
+          },
+          {
+            label: 'Acreditados Presentes',
+            data: [16, 21, 24, 25, 40, 53, 24, 18],
+            backgroundColor: '#10b981',
+            borderRadius: 4,
+            barThickness: 11
+          }
+        ]
       },
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false },
+          legend: {
+            position: 'top',
+            labels: { boxWidth: 12, padding: 12, font: { size: 11, weight: '600' } }
+          },
           tooltip: {
             callbacks: {
               label: function(c) {
-                const totalCharlas = 873;
-                return ` ${c.raw} inscriptos (${((c.raw / totalCharlas) * 100).toFixed(1)}% de las charlas)`;
+                const inscriptosArr = [132, 128, 128, 125, 120, 120, 60, 60];
+                const inscr = inscriptosArr[c.dataIndex];
+                if (c.datasetIndex === 0) {
+                  return ` Inscriptos: ${c.raw}`;
+                } else {
+                  const pct = ((c.raw / inscr) * 100).toFixed(1);
+                  return ` Presentes: ${c.raw} de ${inscr} inscriptos (${pct}% asistió)`;
+                }
               }
             }
           }
@@ -1522,7 +1552,7 @@
         scales: {
           x: {
             beginAtZero: true,
-            max: 150,
+            max: 145,
             grid: { color: '#f4f4f5' },
             ticks: { font: { size: 10 } }
           },
