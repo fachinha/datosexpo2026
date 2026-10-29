@@ -1448,9 +1448,29 @@
           barThickness: 26
         }]
       },
+      plugins: [{
+        id: 'ageValues',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          const meta = chart.getDatasetMeta(0);
+          meta.data.forEach((bar, index) => {
+            const val = chart.data.datasets[0].data[index];
+            ctx.save();
+            ctx.fillStyle = '#ea580c';
+            ctx.font = '700 11px "Plus Jakarta Sans", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+            ctx.fillText(val.toLocaleString('es-AR'), bar.x, bar.y - 4);
+            ctx.restore();
+          });
+        }
+      }],
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: { top: 22 }
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
@@ -1465,8 +1485,13 @@
         scales: {
           y: {
             beginAtZero: true,
+            max: 1100,
             grid: { color: '#f4f4f5' },
-            ticks: { font: { size: 10 }, callback: function(v) { return v.toLocaleString('es-AR'); } }
+            ticks: {
+              stepSize: 250,
+              font: { size: 10 },
+              callback: function(v) { return v.toLocaleString('es-AR'); }
+            }
           },
           x: { grid: { display: false }, ticks: { font: { size: 10.5, weight: '600' }, color: '#27272a' } }
         }
