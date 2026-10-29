@@ -1739,10 +1739,33 @@
           }
         ]
       },
+      plugins: [{
+        id: 'charlasValues',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          chart.data.datasets.forEach((dataset, i) => {
+            const meta = chart.getDatasetMeta(i);
+            const color = i === 0 ? '#ea580c' : '#059669';
+            meta.data.forEach((bar, index) => {
+              const val = dataset.data[index];
+              ctx.save();
+              ctx.fillStyle = color;
+              ctx.font = '700 10.5px "Plus Jakarta Sans", sans-serif';
+              ctx.textAlign = 'left';
+              ctx.textBaseline = 'middle';
+              ctx.fillText(val, bar.x + 5, bar.y);
+              ctx.restore();
+            });
+          });
+        }
+      }],
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: { right: 32 }
+        },
         plugins: {
           legend: {
             position: 'top',
@@ -1766,7 +1789,7 @@
         scales: {
           x: {
             beginAtZero: true,
-            max: 145,
+            max: 155,
             grid: { color: '#f4f4f5' },
             ticks: { font: { size: 10 } }
           },
@@ -1871,10 +1894,33 @@
           }
         ]
       },
+      plugins: [{
+        id: 'reelsValues',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          chart.data.datasets.forEach((dataset, i) => {
+            const meta = chart.getDatasetMeta(i);
+            const color = i === 0 ? '#ea580c' : '#9a3412';
+            meta.data.forEach((bar, index) => {
+              const val = dataset.data[index];
+              ctx.save();
+              ctx.fillStyle = color;
+              ctx.font = '700 9px "Plus Jakarta Sans", sans-serif';
+              ctx.textAlign = 'left';
+              ctx.textBaseline = 'middle';
+              ctx.fillText(val.toLocaleString('es-AR'), bar.x + 4, bar.y);
+              ctx.restore();
+            });
+          });
+        }
+      }],
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: { right: 42 }
+        },
         plugins: {
           legend: { position: 'top', labels: { boxWidth: 10, padding: 10, font: { size: 10.5, weight: '600' } } },
           tooltip: {
@@ -1888,8 +1934,10 @@
         scales: {
           x: {
             beginAtZero: true,
+            max: 15000,
             grid: { color: '#f4f4f5' },
             ticks: {
+              stepSize: 3000,
               font: { size: 10 },
               callback: function(v) { return v >= 1000 ? (v / 1000) + 'K' : v; }
             }
