@@ -591,78 +591,227 @@
         </div>
       </div>
 
-      <!-- TOP INSTITUCIONES EDUCATIVAS REPRESENTADAS -->
-      <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-100 pb-3 mb-4">
+      <!-- TOP INSTITUCIONES EDUCATIVAS REPRESENTADAS (BASE OFICIAL V2 CONSOLIDADA) -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl border border-zinc-200/90 shadow-sm space-y-5">
+        
+        <!-- Encabezado con métricas consolidadas v2 -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-100 pb-4">
           <div>
             <h3 class="text-sm sm:text-base font-bold text-zinc-900 flex items-center gap-2">
               <i data-lucide="graduation-cap" class="w-4 h-4 text-orange-500"></i>
               Participación de Estudiantes Secundarios
             </h3>
-            <p class="text-xs text-zinc-400">Relevamiento de escuelas técnicas, públicas y privadas presentes en la Expo</p>
+            <p class="text-xs text-zinc-400 mt-0.5">
+              Relevamiento consolidado de 50 colegios públicos, técnicos y privados (Base Oficial v2 normalizada)
+            </p>
           </div>
-          <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full self-start sm:self-auto">
-            +360 Alumnos Secundarios
-          </span>
+          <div class="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              364 Alumnos Únicos
+            </span>
+            <span class="text-xs font-semibold text-zinc-600 bg-zinc-100 border border-zinc-200 px-2.5 py-1 rounded-full">
+              427 Inscripciones · 50 Colegios
+            </span>
+          </div>
         </div>
 
+        <!-- Tarjetas de Instituciones Líderes por Modalidad -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           
-          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80">
-            <span class="text-[10px] font-black uppercase text-orange-600 block mb-0.5">#1 en Asistencia</span>
+          <!-- #1 ESRN 46 -->
+          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80 hover:border-orange-300 transition-colors">
+            <span class="text-[10px] font-black uppercase text-orange-600 block mb-0.5">#1 Pública Provincial</span>
+            <h4 class="text-xs font-bold text-zinc-900 truncate" title="ESRN Nº 46">ESRN Nº 46</h4>
+            <div class="flex items-baseline gap-1 mt-1">
+              <span class="text-xl font-black text-zinc-900">35</span>
+              <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
+            </div>
+            <span class="text-[9.5px] text-zinc-400 block mt-0.5">35 inscripciones</span>
+          </div>
+
+          <!-- #2 San Esteban -->
+          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80 hover:border-orange-300 transition-colors">
+            <span class="text-[10px] font-black uppercase text-orange-600 block mb-0.5">#1 en Charlas</span>
             <h4 class="text-xs font-bold text-zinc-900 truncate" title="Colegio San Esteban">Col. San Esteban</h4>
             <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-lg font-black text-zinc-900">54</span>
+              <span class="text-xl font-black text-zinc-900">28</span>
               <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
             </div>
+            <span class="text-[9.5px] text-orange-600 font-semibold block mt-0.5">54 inscripciones</span>
           </div>
 
-          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80">
-            <span class="text-[10px] font-black uppercase text-zinc-400 block mb-0.5">#2</span>
-            <h4 class="text-xs font-bold text-zinc-900 truncate" title="ESRN N° 46">ESRN N° 46</h4>
+          <!-- #3 CET 25 -->
+          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80 hover:border-orange-300 transition-colors">
+            <span class="text-[10px] font-black uppercase text-zinc-500 block mb-0.5">#1 Técnica Gastronomía</span>
+            <h4 class="text-xs font-bold text-zinc-900 truncate" title="CET Nº 25 Hotelería y Gastronomía">CET Nº 25</h4>
             <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-lg font-black text-zinc-900">26</span>
+              <span class="text-xl font-black text-zinc-900">26</span>
               <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
             </div>
+            <span class="text-[9.5px] text-zinc-400 block mt-0.5">26 inscripciones</span>
           </div>
 
-          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80">
-            <span class="text-[10px] font-black uppercase text-zinc-400 block mb-0.5">#3</span>
+          <!-- #4 Don Bosco -->
+          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80 hover:border-orange-300 transition-colors">
+            <span class="text-[10px] font-black uppercase text-zinc-500 block mb-0.5">#1 Confesional</span>
             <h4 class="text-xs font-bold text-zinc-900 truncate" title="Colegio Don Bosco">Don Bosco</h4>
             <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-lg font-black text-zinc-900">26</span>
+              <span class="text-xl font-black text-zinc-900">25</span>
               <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
+            </div>
+            <span class="text-[9.5px] text-zinc-400 block mt-0.5">26 inscripciones</span>
+          </div>
+
+          <!-- #5 Técnicas CET 28 & 2 -->
+          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80 hover:border-orange-300 transition-colors">
+            <span class="text-[10px] font-black uppercase text-zinc-500 block mb-0.5">Técnicas CET 28 y 2</span>
+            <h4 class="text-xs font-bold text-zinc-900 truncate" title="CET Nº 28 y CET Nº 2 Industrial">CET Nº 28 · CET 2</h4>
+            <div class="flex items-baseline gap-1 mt-1">
+              <span class="text-xl font-black text-zinc-900">40</span>
+              <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
+            </div>
+            <span class="text-[9.5px] text-zinc-400 block mt-0.5">20 alumnos c/u</span>
+          </div>
+
+          <!-- #6 Públicas ESRN 2 & 20 -->
+          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80 hover:border-orange-300 transition-colors">
+            <span class="text-[10px] font-black uppercase text-zinc-500 block mb-0.5">Públicas ESRN 2 y 20</span>
+            <h4 class="text-xs font-bold text-zinc-900 truncate" title="ESRN Nº 2 y ESRN Nº 20">ESRN Nº 2 · 20</h4>
+            <div class="flex items-baseline gap-1 mt-1">
+              <span class="text-xl font-black text-zinc-900">35</span>
+              <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
+            </div>
+            <span class="text-[9.5px] text-zinc-400 block mt-0.5">18 y 17 alumnos</span>
+          </div>
+
+        </div>
+
+        <!-- Tabla / Ranking Detallado de las 12 Principales Instituciones y Distribución por Curso -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-2">
+          
+          <!-- Ranking Top 12 Instituciones (2 columnas de ancho en desktop) -->
+          <div class="lg:col-span-2 bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70">
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700">
+              <span>Top Instituciones Educativas (por alumnos únicos)</span>
+              <span class="text-[11px] text-zinc-400 font-normal">Base de datos final v2</span>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs">
+              
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-orange-600 mr-1.5">1.</b> ESRN Nº 46</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">35 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-orange-600 mr-1.5">2.</b> Colegio San Esteban</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">28 al. (54 inscr.)</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">3.</b> CET Nº 25 (Gastronomía)</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">26 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">4.</b> Colegio Don Bosco</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">25 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">5.</b> CET Nº 28</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">20 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">6.</b> CET Nº 2 (Industrial)</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">20 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">7.</b> ESRN Nº 2</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">18 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">8.</b> ESRN Nº 20</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">17 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">9.</b> Col. Tecnológico del Sur</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">16 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">10.</b> Colegio QMark</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">15 alumnos</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">11.</b> Nehuen Peuman</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">11 al. (25 inscr.)</span>
+              </div>
+
+              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
+                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">12.</b> ESRN 123 · Dante · ESRN 96</span>
+                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">10 al. c/u</span>
+              </div>
+
             </div>
           </div>
 
-          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80">
-            <span class="text-[10px] font-black uppercase text-zinc-400 block mb-0.5">#4 Técnica</span>
-            <h4 class="text-xs font-bold text-zinc-900 truncate" title="CET N° 25 Hotelería y Gastronomía">CET N° 25</h4>
-            <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-lg font-black text-zinc-900">25</span>
-              <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
-            </div>
-          </div>
+          <!-- Perfil Académico / Cursos de los Estudiantes -->
+          <div class="bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70 flex flex-col justify-between">
+            <div>
+              <div class="pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700 flex items-center justify-between">
+                <span>Nivel y Cursos Representados</span>
+                <span class="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">90.9% Egresantes</span>
+              </div>
+              <div class="space-y-2.5 text-xs">
+                <div>
+                  <div class="flex justify-between text-zinc-700 font-semibold mb-1">
+                    <span>5.° Año (Último año ESRN / Bachiller)</span>
+                    <span class="text-zinc-900 font-bold">67.2%</span>
+                  </div>
+                  <div class="w-full bg-zinc-200 rounded-full h-2 overflow-hidden">
+                    <div class="bg-orange-500 h-2 rounded-full" style="width: 67.2%"></div>
+                  </div>
+                  <span class="text-[10px] text-zinc-400 mt-0.5 block">287 inscripciones a actividades</span>
+                </div>
 
-          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80">
-            <span class="text-[10px] font-black uppercase text-zinc-400 block mb-0.5">#5 Industrial</span>
-            <h4 class="text-xs font-bold text-zinc-900 truncate" title="CET N° 2 Técnico Industrial">CET N° 2</h4>
-            <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-lg font-black text-zinc-900">17</span>
-              <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
-            </div>
-          </div>
+                <div>
+                  <div class="flex justify-between text-zinc-700 font-semibold mb-1">
+                    <span>6.° Año (Secundarias Técnicas CET)</span>
+                    <span class="text-zinc-900 font-bold">23.7%</span>
+                  </div>
+                  <div class="w-full bg-zinc-200 rounded-full h-2 overflow-hidden">
+                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 23.7%"></div>
+                  </div>
+                  <span class="text-[10px] text-zinc-400 mt-0.5 block">101 inscripciones a actividades</span>
+                </div>
 
-          <div class="bg-zinc-50 p-3 rounded-xl border border-zinc-200/80">
-            <span class="text-[10px] font-black uppercase text-zinc-400 block mb-0.5">#6 Adultos</span>
-            <h4 class="text-xs font-bold text-zinc-900 truncate" title="CENS Secundario Adultos">CENS Adultos</h4>
-            <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-lg font-black text-zinc-900">12</span>
-              <span class="text-[10px] font-semibold text-zinc-500">alumnos</span>
+                <div>
+                  <div class="flex justify-between text-zinc-700 font-semibold mb-1">
+                    <span>Otros Cursos y Ciclo Básico</span>
+                    <span class="text-zinc-900 font-bold">9.1%</span>
+                  </div>
+                  <div class="w-full bg-zinc-200 rounded-full h-2 overflow-hidden">
+                    <div class="bg-zinc-400 h-2 rounded-full" style="width: 9.1%"></div>
+                  </div>
+                  <span class="text-[10px] text-zinc-400 mt-0.5 block">39 inscripciones (1° a 4° y CENS)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 mt-3 border-t border-zinc-200/70 text-[10.5px] text-zinc-500 italic">
+              Convocatoria orientada a jóvenes en transición formativa hacia el primer empleo formal.
             </div>
           </div>
 
         </div>
+
       </div>
 
     </section>
