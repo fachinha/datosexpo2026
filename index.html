@@ -1502,10 +1502,30 @@
           }
         ]
       },
+      plugins: [{
+        id: 'seekingValues',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          const meta0 = chart.getDatasetMeta(0);
+          meta0.data.forEach((bar, index) => {
+            const val = chart.data.datasets[0].data[index];
+            ctx.save();
+            ctx.fillStyle = '#ea580c';
+            ctx.font = '700 11px "Plus Jakarta Sans", sans-serif';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(val.toLocaleString('es-AR'), bar.x + 6, bar.y);
+            ctx.restore();
+          });
+        }
+      }],
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: { right: 35 }
+        },
         plugins: {
           legend: { position: 'top', labels: { boxWidth: 10, padding: 10, font: { size: 10.5, weight: '600' } } },
           tooltip: {
