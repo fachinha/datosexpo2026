@@ -687,32 +687,36 @@
 
         </div>
 
-        <!-- Tabla / Ranking Detallado de las 12 Principales Instituciones y Distribución por Curso -->
+        <!-- Tabla / Ranking Detallado de las 50 Instituciones y Distribución por Curso -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-2">
           
-          <!-- Ranking Top Instituciones Educativas en Gráfico de Barras -->
+          <!-- Ranking Top Instituciones Educativas en Gráfico de Barras (50 Escuelas) -->
           <div class="lg:col-span-2 bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700">
+              <div class="flex flex-wrap items-center justify-between pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700 gap-2">
                 <span class="flex items-center gap-1.5">
                   <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-orange-500"></i>
                   Top Instituciones Educativas (por alumnos únicos)
                 </span>
-                <span class="text-[11px] text-zinc-400 font-normal">Base oficial v2 consolidada</span>
+                <span class="text-[10.5px] text-orange-700 font-bold bg-orange-50 border border-orange-200 px-2 py-0.5 rounded-md">
+                  50 Colegios Relevados · 421 Alumnos Únicos
+                </span>
               </div>
-              <div class="relative w-full" style="height: 310px;">
+              <div class="relative w-full" style="height: 1180px;">
                 <canvas id="topSchoolsChart"></canvas>
               </div>
             </div>
             <div class="pt-2.5 mt-2 border-t border-zinc-200/60 flex flex-wrap items-center justify-between gap-2 text-[10.5px] text-zinc-500">
-              <span>* Tecnológico del Sur (37) y ESRN 46 (35) lideran. Destacan ESRN 20 (31), San Esteban (54 charlas), ESRN 44 (22) y Antu Ruca (9).</span>
+              <span>* Tecnológico del Sur (37) y ESRN 46 (35) lideran. Destacan ESRN 20 (31), San Esteban (54 charlas), CET 25 (26), Don Bosco (25), ESRN 44 (22) y Antu Ruca (9).</span>
               <span class="font-semibold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200/70">421 alumnos en 50 colegios</span>
             </div>
           </div>
 
-          <!-- Perfil Académico / Cursos de los Estudiantes -->
-          <div class="bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70 flex flex-col justify-between">
-            <div>
+          <!-- Perfil Académico / Cursos de los Estudiantes y Análisis Institucional -->
+          <div class="space-y-4">
+            
+            <!-- Panel 1: Nivel y Cursos Representados -->
+            <div class="bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70">
               <div class="pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700 flex items-center justify-between">
                 <span>Nivel y Cursos Representados</span>
                 <span class="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">90.9% Egresantes</span>
@@ -751,11 +755,81 @@
                   <span class="text-[10px] text-zinc-400 mt-0.5 block">39 inscripciones (1° a 4° y CENS)</span>
                 </div>
               </div>
+              <div class="pt-3 mt-3 border-t border-zinc-200/70 text-[10.5px] text-zinc-500 italic">
+                Convocatoria orientada a jóvenes en transición formativa hacia el primer empleo formal.
+              </div>
             </div>
 
-            <div class="pt-3 mt-3 border-t border-zinc-200/70 text-[10.5px] text-zinc-500 italic">
-              Convocatoria orientada a jóvenes en transición formativa hacia el primer empleo formal.
+            <!-- Panel 2: Distribución por Modalidad Institucional -->
+            <div class="bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70">
+              <div class="pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700 flex items-center justify-between">
+                <span>Modalidad de Gestión Escolar</span>
+                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">4 Modalidades</span>
+              </div>
+              <div class="space-y-2 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="text-zinc-700 font-medium">ESRN Públicas Rionegrinas</span>
+                  <span class="font-bold text-zinc-900">182 al. <span class="text-[10px] font-normal text-zinc-500">(43.2%)</span></span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-zinc-700 font-medium">Colegios Privados y Confesionales</span>
+                  <span class="font-bold text-zinc-900">125 al. <span class="text-[10px] font-normal text-zinc-500">(29.7%)</span></span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-zinc-700 font-medium">Técnicas Provinciales (CET/Tecnol.)</span>
+                  <span class="font-bold text-zinc-900">103 al. <span class="text-[10px] font-normal text-zinc-500">(24.5%)</span></span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-zinc-700 font-medium">Sociales, Adultos y CENS</span>
+                  <span class="font-bold text-zinc-900">11 al. <span class="text-[10px] font-normal text-zinc-500">(2.6%)</span></span>
+                </div>
+              </div>
             </div>
+
+            <!-- Panel 3: Récords de Inscripción a Charlas -->
+            <div class="bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70">
+              <div class="pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700 flex items-center justify-between">
+                <span>Mayor Demanda de Talleres</span>
+                <span class="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">Promedio 1.15</span>
+              </div>
+              <div class="space-y-1.5 text-xs">
+                <div class="flex items-center justify-between py-0.5 border-b border-zinc-100">
+                  <span class="text-zinc-700 truncate pr-2">Colegio San Esteban</span>
+                  <span class="font-bold text-orange-600 whitespace-nowrap">54 inscripciones</span>
+                </div>
+                <div class="flex items-center justify-between py-0.5 border-b border-zinc-100">
+                  <span class="text-zinc-700 truncate pr-2">Colegio Tecnológico del Sur</span>
+                  <span class="font-bold text-zinc-900 whitespace-nowrap">37 inscripciones</span>
+                </div>
+                <div class="flex items-center justify-between py-0.5 border-b border-zinc-100">
+                  <span class="text-zinc-700 truncate pr-2">ESRN Nº 46</span>
+                  <span class="font-bold text-zinc-900 whitespace-nowrap">35 inscripciones</span>
+                </div>
+                <div class="flex items-center justify-between py-0.5 border-b border-zinc-100">
+                  <span class="text-zinc-700 truncate pr-2">ESRN Nº 20</span>
+                  <span class="font-bold text-zinc-900 whitespace-nowrap">32 inscripciones</span>
+                </div>
+                <div class="flex items-center justify-between py-0.5 border-b border-zinc-100">
+                  <span class="text-zinc-700 truncate pr-2">Nehuen Peuman</span>
+                  <span class="font-bold text-zinc-900 whitespace-nowrap">25 inscripciones (2.27/al.)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Inserción y Búsqueda Laboral -->
+            <div class="bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70 text-xs space-y-2">
+              <div class="flex items-center justify-between text-zinc-800 font-bold pb-1 border-b border-zinc-200/60">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="briefcase" class="w-3.5 h-3.5 text-orange-500"></i>
+                  Empleabilidad Escolar
+                </span>
+                <span class="text-emerald-600 font-black">51.1% Activa</span>
+              </div>
+              <p class="text-zinc-600 leading-relaxed text-[11px]">
+                215 de los estudiantes secundarios inscriptos declararon estar activamente buscando inserción laboral, con interés concentrado en talleres de confección de CV y primeras entrevistas de trabajo.
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -1570,29 +1644,69 @@
       }
     });
 
-    // Top Instituciones Educativas (por alumnos únicos)
+    // Top Instituciones Educativas (por alumnos únicos) - 50 Colegios
     new Chart(document.getElementById('topSchoolsChart'), {
       type: 'bar',
       data: {
         labels: [
-          'Col. Tecnológico del Sur',
+          'Colegio Tecnológico del Sur',
           'ESRN Nº 46',
           'ESRN Nº 20',
           'Colegio San Esteban',
-          'CET Nº 25 (Gastronomía)',
+          'CET Nº 25 (Hotelería y Gastronomía)',
           'Colegio Don Bosco',
           'ESRN Nº 44',
           'CET Nº 28',
           'CET Nº 2 (Industrial)',
-          'ESRN Nº 2'
+          'ESRN Nº 2',
+          'Colegio QMark',
+          'Nehuen Peuman',
+          'ESRN Nº 123',
+          'Instituto Dante Alighieri',
+          'ESRN Nº 96',
+          'Antu Ruca',
+          'Colegio Castex',
+          'Instituto Superior Patagónico',
+          'Ceferino Namuncurá',
+          'ESRN Nº 45',
+          'Escuela Cooperativa Los Andes',
+          'Integral Vuriloche',
+          'Colegio Jean Piaget',
+          'Colegio San Patricio',
+          'Salesiano de la Patagonia',
+          'ESRN Ángel Gallardo',
+          'CEM Nº 20',
+          'ESRN Nº 37',
+          'ESRN Nº 36',
+          'SEWBA',
+          'CEM Nº 77',
+          'ESRN Nº 132',
+          'Amuyen',
+          'CENS Nº 4',
+          'CENS Nº 5',
+          'CEM 77',
+          'CEM Nº 104',
+          'ESRN 138',
+          'UNCo',
+          'Escuela 315',
+          'CEM 20',
+          'ESRN Nº 105',
+          'EEBA Nº 9',
+          'CEM Nº 143',
+          'Alcuer',
+          'Vieytes',
+          'CENS Nº 6',
+          'Aitue',
+          'José Hernández 21',
+          'ESRN Waldorf'
         ],
         datasets: [{
           label: 'Alumnos Únicos',
-          data: [37, 35, 31, 28, 26, 25, 22, 20, 20, 18],
+          data: [37, 35, 31, 28, 26, 25, 22, 20, 20, 18, 15, 11, 10, 10, 10, 9, 9, 9, 6, 6, 6, 6, 5, 5, 4, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
           backgroundColor: '#ea580c',
           hoverBackgroundColor: '#c2410c',
-          borderRadius: 6,
-          barThickness: 15
+          borderRadius: 4,
+          barThickness: 12
         }]
       },
       plugins: [{
@@ -1605,10 +1719,10 @@
               const val = dataset.data[index];
               ctx.save();
               ctx.fillStyle = '#ea580c';
-              ctx.font = '700 11.5px "Plus Jakarta Sans", sans-serif';
+              ctx.font = '700 10px "Plus Jakarta Sans", sans-serif';
               ctx.textAlign = 'left';
               ctx.textBaseline = 'middle';
-              ctx.fillText(val, bar.x + 6, bar.y);
+              ctx.fillText(val, bar.x + 5, bar.y);
               ctx.restore();
             });
           });
@@ -1620,7 +1734,7 @@
         maintainAspectRatio: false,
         layout: {
           padding: {
-            right: 28
+            right: 32
           }
         },
         plugins: {
@@ -1638,7 +1752,47 @@
                   '22 inscripciones',
                   '22 inscripciones',
                   '20 inscripciones',
-                  '19 inscripciones'
+                  '19 inscripciones',
+                  '15 inscripciones',
+                  '25 inscripciones',
+                  '10 inscripciones',
+                  '10 inscripciones',
+                  '10 inscripciones',
+                  '9 inscripciones',
+                  '9 inscripciones',
+                  '9 inscripciones',
+                  '11 inscripciones',
+                  '10 inscripciones',
+                  '6 inscripciones',
+                  '6 inscripciones',
+                  '5 inscripciones',
+                  '5 inscripciones',
+                  '4 inscripciones',
+                  '4 inscripciones',
+                  '3 inscripciones',
+                  '3 inscripciones',
+                  '3 inscripciones',
+                  '3 inscripciones',
+                  '2 inscripciones',
+                  '2 inscripciones',
+                  '2 inscripciones',
+                  '5 inscripciones',
+                  '3 inscripciones',
+                  '2 inscripciones',
+                  '2 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones',
+                  '1 inscripciones'
                 ];
                 return ` ${c.raw} alumnos únicos (${extra[c.dataIndex]})`;
               }
@@ -1651,7 +1805,7 @@
             max: 45,
             grid: { color: '#f4f4f5' },
             ticks: {
-              stepSize: 15,
+              stepSize: 10,
               font: { size: 10 },
               callback: function(v) { return v + ' al.'; }
             }
@@ -1659,7 +1813,7 @@
           y: {
             grid: { display: false },
             ticks: {
-              font: { size: 10.5, weight: '600' },
+              font: { size: 9.5, weight: '600' },
               color: '#27272a'
             }
           }
