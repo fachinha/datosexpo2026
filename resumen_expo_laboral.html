@@ -690,75 +690,23 @@
         <!-- Tabla / Ranking Detallado de las 12 Principales Instituciones y Distribución por Curso -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-2">
           
-          <!-- Ranking Top 12 Instituciones (2 columnas de ancho en desktop) -->
-          <div class="lg:col-span-2 bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70">
-            <div class="flex items-center justify-between pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700">
-              <span>Top Instituciones Educativas (por alumnos únicos)</span>
-              <span class="text-[11px] text-zinc-400 font-normal">Base de datos final v2</span>
+          <!-- Ranking Top Instituciones Educativas en Gráfico de Barras -->
+          <div class="lg:col-span-2 bg-zinc-50/70 p-4 rounded-xl border border-zinc-200/70 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-2 mb-3 border-b border-zinc-200/70 text-xs font-bold text-zinc-700">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-orange-500"></i>
+                  Top Instituciones Educativas (por alumnos únicos)
+                </span>
+                <span class="text-[11px] text-zinc-400 font-normal">Base oficial v2 consolidada</span>
+              </div>
+              <div class="relative w-full" style="height: 310px;">
+                <canvas id="topSchoolsChart"></canvas>
+              </div>
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs">
-              
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-orange-600 mr-1.5">1.</b> ESRN Nº 46</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">35 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-orange-600 mr-1.5">2.</b> Colegio San Esteban</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">28 al. (54 inscr.)</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">3.</b> CET Nº 25 (Gastronomía)</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">26 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">4.</b> Colegio Don Bosco</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">25 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">5.</b> CET Nº 28</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">20 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">6.</b> CET Nº 2 (Industrial)</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">20 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">7.</b> ESRN Nº 2</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">18 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">8.</b> ESRN Nº 20</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">17 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">9.</b> Col. Tecnológico del Sur</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">16 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">10.</b> Colegio QMark</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">15 alumnos</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">11.</b> Nehuen Peuman</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">11 al. (25 inscr.)</span>
-              </div>
-
-              <div class="flex items-center justify-between py-1 border-b border-zinc-100">
-                <span class="text-zinc-700 truncate"><b class="text-zinc-400 mr-1.5">12.</b> ESRN 123 · Dante · ESRN 96</span>
-                <span class="font-bold text-zinc-900 bg-white px-2 py-0.5 rounded border border-zinc-200 shrink-0">10 al. c/u</span>
-              </div>
-
+            <div class="pt-2.5 mt-2 border-t border-zinc-200/60 flex flex-wrap items-center justify-between gap-2 text-[10.5px] text-zinc-500">
+              <span>* ESRN 46 lidera en estudiantes únicos (35); San Esteban y Nehuen Peuman destacan en rotación de charlas (54 y 25 inscr.).</span>
+              <span class="font-semibold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200/70">364 alumnos en 50 colegios</span>
             </div>
           </div>
 
@@ -1573,6 +1521,79 @@
         scales: {
           x: { stacked: true, beginAtZero: true, grid: { color: '#f4f4f5' }, ticks: { font: { size: 10 } } },
           y: { stacked: true, grid: { display: false }, ticks: { font: { size: 10, weight: '600' }, color: '#27272a' } }
+        }
+      }
+    });
+
+    // Top Instituciones Educativas (por alumnos únicos)
+    new Chart(document.getElementById('topSchoolsChart'), {
+      type: 'bar',
+      data: {
+        labels: [
+          'ESRN Nº 46',
+          'Colegio San Esteban',
+          'CET Nº 25 (Gastronomía)',
+          'Colegio Don Bosco',
+          'CET Nº 28',
+          'CET Nº 2 (Industrial)',
+          'ESRN Nº 2',
+          'ESRN Nº 20',
+          'Col. Tecnológico del Sur',
+          'Colegio QMark'
+        ],
+        datasets: [{
+          label: 'Alumnos Únicos',
+          data: [35, 28, 26, 25, 20, 20, 18, 17, 16, 15],
+          backgroundColor: '#ea580c',
+          hoverBackgroundColor: '#c2410c',
+          borderRadius: 6,
+          barThickness: 15
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) {
+                const extra = [
+                  '35 inscripciones',
+                  '54 inscripciones a charlas',
+                  '26 inscripciones',
+                  '26 inscripciones',
+                  '22 inscripciones',
+                  '20 inscripciones',
+                  '19 inscripciones',
+                  '18 inscripciones',
+                  '16 inscripciones',
+                  '15 inscripciones'
+                ];
+                return ` ${c.raw} alumnos únicos (${extra[c.dataIndex]})`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 40,
+            grid: { color: '#f4f4f5' },
+            ticks: {
+              stepSize: 10,
+              font: { size: 10 },
+              callback: function(v) { return v + ' al.'; }
+            }
+          },
+          y: {
+            grid: { display: false },
+            ticks: {
+              font: { size: 10.5, weight: '600' },
+              color: '#27272a'
+            }
+          }
         }
       }
     });
