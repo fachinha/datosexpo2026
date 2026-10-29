@@ -1550,10 +1550,34 @@
           barThickness: 15
         }]
       },
+      plugins: [{
+        id: 'rightValueLabels',
+        afterDatasetsDraw(chart) {
+          const { ctx } = chart;
+          chart.data.datasets.forEach((dataset, i) => {
+            const meta = chart.getDatasetMeta(i);
+            meta.data.forEach((bar, index) => {
+              const val = dataset.data[index];
+              ctx.save();
+              ctx.fillStyle = '#ea580c';
+              ctx.font = '700 11.5px "Plus Jakarta Sans", sans-serif';
+              ctx.textAlign = 'left';
+              ctx.textBaseline = 'middle';
+              ctx.fillText(val, bar.x + 6, bar.y);
+              ctx.restore();
+            });
+          });
+        }
+      }],
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: {
+            right: 28
+          }
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
